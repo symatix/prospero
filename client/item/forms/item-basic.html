@@ -1,0 +1,71 @@
+<template name="form_basic">
+<h3>basic information</h3>
+<div class="row form-box">
+<div class="col-md-6 col-sm-12">
+  <div class="row">
+  <div class="col-xs-12 author">
+    <div class="individual-property">AUTHOR
+      <input type="text" class="individual-value individual-form" id="author" placeholder="" value="{{basic.author}}">
+    </div>
+  </div>
+  <div class="col-xs-12 title">
+    <div class="individual-property">TITLE
+      <input type="text" class="individual-value individual-form" id="title" placeholder="" value="{{basic.title}}">
+    </div>
+  </div>
+  <div class="col-xs-12 date">
+    <div class="individual-property">DATE
+      <input type="text" class="individual-value individual-form" id="date" placeholder="" value="{{basic.date}}">
+    </div>
+  </div>
+  <div class="col-xs-12 period-style">
+    <div class="individual-property">PERIOD / STYLE
+      <input type="text" class="individual-value individual-form" id="period_style" placeholder="" value="{{basic.period_style}}">
+    </div>
+  </div>
+  <div class="col-xs-12 collection-owner">
+    <div class="individual-property">COLLECTION / OWNER
+      <input type="text" class="individual-value individual-form" id="collection_owner" placeholder="" value="{{basic.collection_owner}}"></div>
+  </div>
+  <div class="col-xs-12 museum-gallery">
+    <div class="individual-property">MUSEUM / GALLERY
+      <input type="text" class="individual-value individual-form" id="museum_gallery" placeholder="" value="{{basic.museum_gallery}}">
+    </div>
+  </div>
+</div><!-- /first col -->
+</div><!-- /second row -->
+<!-- second col -->
+<div class="col-md-6 col-sm-12">
+  <div class="painting-technique">
+    <div class="individual-property">PAINTING / TECHNIQUE
+      <input type="text" class="individual-value individual-form" id="painting_technique" placeholder="" value="{{basic.painting_technique}}">
+    </div>
+  </div>
+  <div class="stretcher">
+    <div class="individual-property">STRETCHER
+      <input type="text" class="individual-value individual-form" id="stretcher" placeholder="" value="{{basic.stretcher}}">
+    </div>
+  </div>
+  <div class="support">
+    <div class="individual-property">SUPPORT
+      <input type="text" class="individual-value individual-form" id="support" placeholder="" value="{{basic.support}}">
+    </div>
+  </div>
+  <div class="priming">
+    <div class="individual-property">PRIMING
+      <input type="text" class="individual-value individual-form" id="priming" placeholder="" value="{{basic.priming}}">
+    </div>
+  </div>
+  <div class="paint-layer">
+    <div class="individual-property">PAINT LAYER
+      <input type="text" class="individual-value individual-form" id="paint_layer" placeholder="" value="{{basic.paint_layer}}">
+    </div>
+  </div>
+  <div class="varnish">
+    <div class="individual-property">VARNISH
+      <input type="text" class="individual-value individual-form" id="varnish" placeholder="" value="{{basic.varnish}}">
+    </div>
+  </div>
+</div><!-- /second col -->
+</div>
+</template>

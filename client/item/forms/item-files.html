@@ -1,0 +1,80 @@
+<template name="form_files">
+<h3>files</h3>
+  <div class="col-md-6 col-sm-12 form-box">
+  <!-- front image -->
+
+    <div class="individual-property"> FRONT IMAGE
+    <label for="data_img_front" class="upload_label" id="upload_front">- .jp*g | .png -</label>
+      <input class="individual-data-value" type="file" id="data_img_front">
+    </div>
+
+    <!-- hidden part -->
+      <div class="img_front hidden">
+      <div class="individual-property">IMAGE: FRONT
+        <input type="text" class="individual-value individual-form" id="img_front" placeholder="" value="{{data.imgs.img_front}}">
+      </div>
+    </div>
+    <div class="img_front_id hidden">
+      <div class="individual-property">IMAGE: FRONT ID
+        <input type="text" class="individual-value individual-form" id="img_front_id" placeholder="" value="{{data.imgs.img_front_id}}">
+      </div>
+    </div>
+    <!-- /hidden part -->
+    <!-- /front image -->
+  <!-- back image -->
+    <div class="individual-property"> BACK IMAGE
+    <label for="data_img_back" class="upload_label" id="upload_back">- .jp*g | .png -</label>
+      <input class="individual-data-value" type="file" id="data_img_back">
+    </div>
+    <!-- hidden part -->
+    <div class="img_back hidden">
+      <div class="individual-property">IMAGE: BACK
+        <input type="text" class="individual-value individual-form" id="img_back" placeholder="" value="{{data.imgs.img_back}}">
+      </div>
+    </div>
+    <div class="img_back_id hidden">
+      <div class="individual-property">IMAGE: BACK ID
+        <input type="text" class="individual-value individual-form" id="img_back_id" placeholder="" value="{{data.imgs.img_back_id}}">
+      </div>
+    </div>
+    <!-- /hidden part -->
+    <!-- /back image -->
+  <!-- research -->
+    <div class="individual-property"> RESEARCH FILES
+    <label for="research" class="upload_label" id="upload_research">- .zip -</label>
+      <input class="individual-data-value" type="file" id="research">
+    </div>
+    <!-- hidden part -->
+    <div class="research hidden">
+      <div class="individual-property">RESEARCH FILES URL
+        <input type="text" class="individual-value individual-form" id="data_research" placeholder="" value="{{data.research.research}}">
+      </div>
+    </div>
+    <div class="research_id hidden">
+      <div class="individual-property">RESEARCH FILES ID
+        <input type="text" class="individual-value individual-form" id="data_research_id" placeholder="" value="{{data.research.research_id}}">
+      </div>
+    </div>
+    <!-- /hidden part -->
+    <!-- /research -->
+  </div>
+</template>
+
+<template name="form_info">
+    <!-- hidden part -->
+      <div class="user_id hidden">
+      <div class="individual-property">USER ID
+        <input type="text" class="individual-value individual-form" id="user_id" placeholder="" value="{{userId}}">
+      </div>
+    </div>
+    <div class="created_at hidden">
+      <div class="individual-property">CREATED AT
+        <input type="text" class="individual-value individual-form" id="created_at" placeholder="" value="{{createdAt}}">
+      </div>
+    </div>
+    <div class="added_by hidden">
+      <div class="individual-property">CREATED BY
+        <input type="text" class="individual-value individual-form" id="added_by" placeholder="" value="{{addedBy}}">
+      </div>
+    </div>
+</template>

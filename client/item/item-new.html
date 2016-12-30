@@ -1,0 +1,33 @@
+<template name="item_new">
+  <!-- container -->
+    <div class="container">
+      <h1 class="breadcrumbs">
+      {{#if admin}}
+        <a class="a-heading" href="/admin/prosperoDB">prosperoDB </a>
+      {{else}}
+        <a class="a-heading" href="/database/myitems">prosperoDB </a>
+      {{/if}}\
+      <span class="post-heading"> new entry</span>
+      </h1>
+    <form class="js-input-painting-data">
+      <div class="row">
+        {{> form_basic}}
+      </div>
+      <div class="row">
+        {{> form_details}}
+      </div>    
+      <!--
+      <div class="row">
+        {{> form_details}}
+      </div>
+    -->
+      <div class="row">
+        {{> form_files}}
+          <div class="col-sm-12 col-md-6">
+            <button type="submit" class="btn btn-default float-right btn-submit">SUBMIT</button>
+          </div>
+      </div>
+
+    </form>
+    </div><!-- /container -->
+</template>

@@ -1,0 +1,85 @@
+<template name="item_details">
+  <!-- container -->
+    <div class="container">
+    <h1 class="breadcrumbs">{{#if currentUser}}{{currentUser.username}} } {{/if}}
+      <a class="a-heading" href="/">prosperoDB </a>/
+      {{#if currentUser}}
+        {{#if admin}}
+          <a class="a-heading" href="/admin/prosperoDB"> manageDB </a>/
+        {{else}}
+          <a class="a-heading" href="/database/myitems"> my entries </a>/
+        {{/if}}
+      {{/if}}
+      <!--
+      {{#if currentUser}}
+        <a class="a-heading" href="/database/myitems">my entries </a>/
+      {{/if}}
+      -->
+      <span class="post-heading"> details<br/>
+        {{basic.author}} - {{basic.title}}
+      </span>
+    </h1>
+      <div class="row margin-top">
+        <div class="col-md-6 col-xs-12">
+          {{> item_details_basic}}
+        </div>
+        <div class="col-md-6 col-xs-12 align-center">
+          {{> item_details_images}}
+          <h3>download</h3>
+          {{> item_details_download}}
+        </div>
+      </div>
+      <div class="row">
+        <h3>details</h3>
+        <div class="row details-box-additional">
+          {{> item_details_details}}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="buttons">
+            <div class="float-right">
+              {{> edit_button}}
+            </div>
+          </div>
+          <br/>
+        </div>
+      </div>
+    </div><!-- /container -->
+
+          <!-- modal - front -->
+      <div class="modal fade" id="thumb-modal-front" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content modal-div">
+
+            <div class="modal-header">
+              <h4 class="modal-title">
+                {{basic.title}} • front image
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </h4>
+            </div>
+            <div class="modal-body align-center">
+              <img class="img-modal" src="{{data.imgs.img_front}}">
+            </div>
+          </div>
+        </div>
+      </div>
+
+          <!-- modal - back -->
+      <div class="modal fade" id="thumb-modal-back" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content modal-div">
+
+            <div class="modal-header">
+              <h4 class="modal-title">
+				{{basic.title}} • back image
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+			 </h4>
+            </div>
+            <div class="modal-body align-center">
+              <img class="img-modal" src="{{data.imgs.img_back}}">
+            </div>
+          </div>
+        </div>
+      </div>
+</template>

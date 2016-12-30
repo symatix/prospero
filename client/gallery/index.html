@@ -1,0 +1,115 @@
+<template name="mainGallery">
+  <div class="container-fluid">
+    <h1 class="prospero">PROSPERO</h1><h2 class="subhead"> ART & RESEARCH DATABASE</h2>
+    {{#if currentUser}}
+      <h3 class="welcome-msg">welcome <span class="post-heading underline">{{username}}</span></h3>
+    {{/if}}
+    <div class="container margin-top">
+      {{#EasySearch.Each index=galleryIndex }}    
+      <div class="row item-list" id="{{__originalId}}">
+            <ul class="list-font">
+              <li>
+<!-- title of item list -->
+                  <div class="col-md-12 align-center item-list-heading item-heading">
+                    {{#if noDataAuthor}}
+                      {{> missing_value}}
+                    {{/if}}
+                      <span class="item-property">&emsp;{{basic.author}}</span><br/>
+                      <i>
+                    {{#if noDataTitle}}
+                      {{> missing_value}}
+                    {{/if}}
+                    {{basic.title}}
+                      </i>
+                  </div>
+                  <div class="col-md-3">
+                  {{#if noImg}}
+                    {{> no_img}}
+                  {{else}}
+                    <img class="img-list" id="img-front-{{__originalId}}" src="{{data.imgs.img_front}}" data-toggle="modal" data-target="#thumb-modal">
+                  {{/if}}
+                  </div>
+<!-- first info collumn -->
+                  <div class="col-md-3 list-font">
+                    <span class="item-property">&emsp;Date</span><br/>
+                    <i>
+                    {{#if noDataDate}}
+                      {{> missing_value}}
+                    {{/if}}
+                    {{basic.date}}</i>
+                    <br/>
+                    <br/>
+                    <span class="item-property">&emsp;Period / Style</span><br/>
+                    <i>
+                    {{#if noDataPeriod}}
+                      {{> missing_value}}
+                    {{/if}}
+					{{basic.period_style}}
+                    </i>
+                  </div>
+<!-- second info collumn -->
+                  <div class="col-md-3 list-font">
+                    <span class="item-property">&emsp;Tehnique</span><br/>
+                    <i>
+                    {{#if noDataTechnique}}
+                      {{> missing_value}}
+                    {{/if}}
+                      {{basic.painting_technique}}
+                    </i>
+                    <br/>
+                    <br/>
+                    <span class="item-property">&emsp;Paint layer</span><br/>
+                    <i>
+                    {{#if noDataPaint}}
+                      {{> missing_value}}
+                    {{/if}}
+					{{basic.paint_layer}}
+                    </i>
+                  </div>
+<!-- third info collumn -->
+                  <div class="col-md-3 list-font">
+                    <span class="item-property">&emsp;Collection / Owner</span><br/>
+                    <i>
+                    {{#if noDataOwner}}
+                      {{> missing_value}}
+                    {{/if}}
+                    {{basic.collection_owner}}</i>
+                    <br/>
+                    <br/>
+                      <a href="/gallery/details/{{__originalId}}">
+                       <button class="btn btn-top-fix btn-default  js-public-details">DETAILS</button>
+                      </a>
+                  </div>
+
+              </li>
+            </ul>
+            </div>
+      {{/EasySearch.Each}}
+      {{> EasySearch.LoadMore attributes=loadBtn index=galleryIndex content="Load more content"}}
+                      {{#EasySearch.IfNoResults index=galleryIndex}}
+                        <div class="no-search">No results found!</div>
+                      {{/EasySearch.IfNoResults}}
+    </div>
+  </div>
+
+
+
+      <!-- modal -->
+      <div class="modal fade" id="thumb-modal" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content modal-div">
+
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title"></h4>
+            </div>
+            <div class="modal-body align-center">
+              <img class="img-modal">
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+</template>
+
