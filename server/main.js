@@ -1,7 +1,7 @@
 import { Meteor } from 'meteor/meteor';
 
 Meteor.startup(() => {
-	if(!Meteor.users.findOne()){
+	if(Meteor.users.find().count() === 0){
 		Accounts.createUser({
 		    	username:"admin",
 		        password: "admin",
@@ -13,5 +13,6 @@ Meteor.startup(() => {
 		       		telephone: "091 / 555 - 007"
 		        }
 		});
+		console.log("ADMIN created");
 	}
 });
