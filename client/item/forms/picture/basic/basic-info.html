@@ -1,0 +1,84 @@
+<template name="item_basic">
+  <div class="row relative basic-fix">
+    <button class="btn btn-default btn-toggle btn_toggleBasic float-right">Colapse</button>
+    <h3 id="basic_href" >basic information</h3>
+  </div>
+  <div class="toggleBasic">
+  <div class="row">
+    <div class="col-xs-12 col-md-6 individual-property author">
+      AUTHOR
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="author" placeholder="" value="{{picture.basic.author}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property title">
+      TITLE
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="title" placeholder="" value="{{picture.basic.title}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property date">
+      DATE
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="date" placeholder="(year - YYYY)" value="{{picture.basic.date}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property painting-technique">
+      TECHNIQUE
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="technique" placeholder="(e.g. fresco, gouache, oil painting, tempera, etc.)" value="{{picture.basic.technique}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property dimensions_noFrame">
+      DIMENSIONS
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="dimensions_noFrame" placeholder="(without frame; hight (cm), width (cm))" value="{{picture.basic.dimensions_noFrame}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property dimensions_frame">
+      DIMENSIONS
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="dimensions_noFrame" placeholder="(without frame; hight (cm), width (cm))" value="{{picture.basic.dimensions_frame}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property originalOwner">
+      ORIGINAL OWNER
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="originalOwner" placeholder="(e.g. privat, museum name, gallery name)" value="{{picture.basic.originalOwner}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property currentOwner">
+      CURRENT OWNER
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="currentOwner" placeholder="(e.g. privat, museum name, gallery name)" value="{{picture.basic.currentOwner}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property originalLocation">
+      ORIGINAL LOCATION
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="originalLocation" placeholder="(e.g. privat, museum name, gallery name)" value="{{picture.basic.originalLocation}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property currentLocation">
+      CURRENT LOCATION
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="currentLocation" placeholder="(e.g. privat, museum name, gallery name)" value="{{picture.basic.currentLocation}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property inventoryNumber">
+      INVENTORY NUMBER(s)
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="inventoryNumber" placeholder="" value="{{picture.basic.inventoryNumber}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property location">
+      INVESTIGATED BY THE FOLLOWING METHODS/TECHNIQUES
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="methodsTechniques" placeholder="" value="{{picture.basic.investigated}}">
+    </div>
+  </div>
+    {{> item_notes}}
+    {{> form_files_basic}}
+  </div>
+</template>

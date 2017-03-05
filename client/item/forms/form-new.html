@@ -1,0 +1,86 @@
+<template name="form_research">
+
+<div class="row form-box">
+    <ul class="nav nav-tabs nav-justified" role="tablist" id="form-basic-select">
+        <li role="presentation">
+            <a class="a-heading-tab" href="#painting" aria-controls="painting" role="tab" data-toggle="tab">
+                <input type="checkbox" name="painting" value="painting" class="hidden">
+                Painting<br/>&nbsp;
+            </a>
+        </li>
+        <li role="presentation">
+            <a class="a-heading-tab" href="#sculpture" aria-controls="sculpture" role="tab" data-toggle="tab">
+                <input type="checkbox" name="sculpture" value="sculpture" class="hidden">
+                Sculpture<br/>&nbsp;
+            </a>
+        </li>
+        <li role="presentation">
+            <a class="a-heading-tab" href="#object-site" aria-controls="object-site" role="tab" data-toggle="tab">
+                <input type="checkbox" name="object-site" value="object-site" class="hidden">
+                Architectural heritage
+            </a>
+        </li>
+        <li role="presentation">
+            <a class="a-heading-tab" href="#sample-crosssection" aria-controls="sample-crosssection" role="tab" data-toggle="tab">
+                <input type="checkbox" name="archival-object" value="archival-object" class="hidden">
+                Archival object
+            </a>
+        </li>
+        <li role="presentation">
+            <a class="a-heading-tab" href="#sample-crosssection" aria-controls="sample-crosssection" role="tab" data-toggle="tab">
+                <input type="checkbox" name="archaeological-object" value="archaeological-object" class="hidden">
+                Archaeological object
+            </a>
+        </li>
+        <li role="presentation">
+            <a class="a-heading-tab" href="#sample-crosssection" aria-controls="sample-crosssection" role="tab" data-toggle="tab">
+                <input type="checkbox" name="sample-crosssection" value="sample-crosssection" class="hidden">
+                Sample/cross-section
+            </a>
+        </li>
+        <li role="presentation">
+            <a class="a-heading-tab" href="#pigment-dye-binder" aria-controls="pigment-dye-binder" role="tab" data-toggle="tab">
+                <input type="checkbox" name="pigment-dye-binder-varnish-reference" value="pigment-dye-binder-varnish-reference" class="hidden">
+                Pigment/dye/binder/varnish/<br/>reference materials
+            </a>
+        </li>
+        <li role="presentation">
+            <a class="a-heading-tab" href="#other" aria-controls="other" role="tab" data-toggle="tab">
+                <input type="checkbox" name="other" value="other" class="hidden">
+                Other<br/>&nbsp;
+            </a>
+        </li>
+    </ul>
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade in" id="painting">
+                {{> picture_basic}}
+            </div>
+            <div role="tabpanel" class="tab-pane fade in" id="sculpture">
+                {{> picture_basic}}
+            </div>
+            <div role="tabpanel" class="tab-pane fade in" id="object-site">
+                <h1>[input fileds]</h1>
+            </div>
+            <div role="tabpanel" class="tab-pane fade in" id="sample-crosssection">
+                <h1>[input fileds]</h1>
+            </div>
+            <div role="tabpanel" class="tab-pane fade in" id="pigment-dye-binder">
+                {{> pigment_dye_binder}}
+            </div>
+            <div role="tabpanel" class="tab-pane fade in" id="other">
+                <h1>[input fileds]</h1>
+            </div>
+        </div>
+</div>
+<!-- does not work on template events - drity hack, but works oooooohhhhh yeaaa -->
+<script>
+$('#form-basic-select li').click(function (e) {
+ // e.preventDefault();
+    $(this).find('a').tab('show');
+ // $(this).tab('show');
+     $(this).closest('ul').find('input[type="checkbox"]').prop('checked','');
+     $(this).closest('li').find('input[type="checkbox"]').prop('checked','checked');
+   
+});
+</script>
+</template>

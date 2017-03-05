@@ -1,0 +1,88 @@
+<template name="material_method_xrf">
+<div class="toggle" id="toggle-materialMethod_xrf">
+  <div class="row align-center">
+    <div class="uderline-method">
+      <h4>XRF</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-6 individual-property xrfExperimental">EXPERIMENTAL PARAMETERS
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="xrfExperimental" placeholder="(e.g. X-ray tube voltage, laser wavelength, air/vacuum, etc.)" value="{{materials.methods.xrf.experimentalParameters}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property xrfElements">ELEMENTS DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="xrfElements" placeholder="(e.g. cobalt blue, red ochre, indigo, etc.)" value="{{materials.methods.xrf.elements}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property xrfFormulae">CHEMICAL FORMULAE DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="xrfFormulae" placeholder="" value="{{materials.methods.xrf.formulae}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property xrfPigmentsDyes">PIGMENTS/DYES IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="xrfPigmentsDyes" placeholder="" value="{{materials.methods.xrf.pigmentsDyes}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property xrfPriming">PRIMING IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="xrfPriming" placeholder="" value="{{materials.methods.xrf.priming}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property xrfBindingMedia">BINDING MEDIA IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="xrfBindingMedia" placeholder="" value="{{materials.methods.xrf.bindingMedia}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property xrfVarnish">VARNISH IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="xrfVarnish" placeholder="" value="{{materials.methods.xrf.varnish}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property xrfStretcherSupportStrainer">STRETCHER/SUPPORT/STRAINER IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="xrfStretcherSupportStrainer" placeholder="" value="{{materials.methods.xrf.stretcherSupportStrainer}}">
+    </div>
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+  <div class="row align-center">
+    <div class="col-xs-12 notes">Brief info about possible multilayers/underpaintings/retouches
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="comments1" name="sources" rows="4" placeholder="(e.g. secondary effects from underlying signal sources)" value="{{materials.methods.xrf.notes.multilayers}}"></textarea>
+    </div>
+    <div class="col-xs-12 notes">Comments
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="comments1" name="sources" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{materials.methods.xrf.notes.comments}}"></textarea>
+    </div>
+    <div class="col-xs-12 notes">Sources
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="sources1" name="sources" rows="4" placeholder="(literature)" value="{{materials.methods.xrf.notes.sources}}"></textarea>
+    </div>
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+
+
+
+  {{> material_xrf_files_1}}
+
+
+  <div class="row align-center">
+    <div class="col-xs-12 notes">Figure captions
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="figureCaption1" name="history" rows="4" placeholder="(captions for the above images)" value="{{materials.methods.xrf.files.figureCaption}}"></textarea>
+    </div>
+    <br/>
+  </div>
+</div>
+</template>

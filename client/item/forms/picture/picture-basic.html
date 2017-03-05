@@ -1,0 +1,42 @@
+<template name="picture_basic">
+<div class="container-fluid">
+  <div id="basic_href">
+    {{> item_basic}}
+  <hr/>
+  </div>
+  <div id="material_href">
+    {{> materials_techniques}}
+  <hr/>
+  </div>
+  <div id="methods_href">
+    {{> methods}}
+  </div>
+  <div class="col-sm-12 col-md-12">
+    <hr/>
+  </div>
+  <div class="col-sm-12 col-md-12" id="submit_href">
+    <button type="submit" class="btn btn-default float-center btn-submit">SUBMIT</button>
+  </div>
+</div>
+  <nav class="hidden-xs navbar-fixed-top nav-hover col-sm-offset-11 col-sm-1" id="spy">
+      <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="50">
+          <li><a href="#documentTop">Top</a></li>
+          <li><a href="#basic_href">Basic info</a></li>
+          <li><a href="#material_href">Materials and techniques</a></li>
+          <li><a href="#methods_href">Methods</a></li>
+          <li><a href="#submit_href">Submit</a></li>
+      </ul>
+  </nav>
+  <script>
+  
+      $('body').scrollspy({target:'#spy'})
+      $(window).on('activate.bs.scrollspy', function (e) {
+          history.replaceState({}, "", $("a[href^='#']", e.target).attr("href"));
+      });
+  </script>
+</template>
+
+
+
+
+

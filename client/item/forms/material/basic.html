@@ -1,0 +1,32 @@
+<template name="pigment_dye_binder">
+<div class="container-fluid">
+  <div id="materials_basic_href">
+    {{> pigment_dye_binder_basic}}
+  <hr/>
+  </div>
+  <div id="materials_methods_href">
+    {{> pigment_dye_binder_methods}}
+  </div>
+  <div class="col-sm-12 col-md-12">
+    <hr/>
+  </div>
+  <div class="col-sm-12 col-md-12" id="materials_submit_href">
+    <button type="submit" class="btn btn-default float-center btn-submit">SUBMIT</button>
+  </div>
+</div>
+  <nav class="hidden-xs navbar-fixed-top nav-hover col-sm-offset-11 col-sm-1" id="spy">
+      <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="50">
+          <li><a href="#documentTop">Top</a></li>
+          <li><a href="#materials_basic_href">Basic info</a></li>
+          <li><a href="#materials_methods_href">Methods</a></li>
+          <li><a href="#materials_submit_href">Submit</a></li>
+      </ul>
+  </nav>
+  <script>
+  
+      $('body').scrollspy({target:'#spy'})
+      $(window).on('activate.bs.scrollspy', function (e) {
+          history.replaceState({}, "", $("a[href^='#']", e.target).attr("href"));
+      });
+  </script>
+</template>

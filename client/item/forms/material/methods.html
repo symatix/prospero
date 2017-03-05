@@ -1,0 +1,16 @@
+<template name="pigment_dye_binder_methods">
+	<div class="row relative">
+   		<button class="btn btn-default btn-toggle btn_toggleMaterialsMethods float-right">Colapse</button>
+	  	<h3>methods used</h3>
+	</div>
+	<div class="toggleMaterialsMethods">
+	 	{{> material_checkbox}}
+
+	 	{{> material_method_xrf}}
+	</div>
+	<script>
+	$(document).ready(function(){
+		$(".toggle").hide();
+	})
+	</script>
+</template>

@@ -1,0 +1,40 @@
+<template name="materials_techniques">
+<div class="row relative">
+    <button class="btn btn-default btn-toggle btn_toggleMaterials float-right">Colapse</button>
+    <h3>materials and techniques</h3>
+</div>
+<div class="toggleMaterials">
+<div class="row">
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+        <ul class="nav nav-tabs nav-justified align-center" role="tablist" id="MaterialsTehniques">
+            <li role="presentation" class="active">
+                <a class="a-heading-tab" href="#MaterialsTehniques1" aria-controls="MaterialsTehniques1" role="tab" data-toggle="tab">
+                    Original artist's materials/techniques<br/>&nbsp;
+                </a>
+            </li>
+            <li role="presentation">
+                <a class="a-heading-tab" href="#MaterialsTehniques2" aria-controls="MaterialsTehniques2" role="tab" data-toggle="tab">
+                    Later interventions/retouches<br/>&nbsp;
+                </a>
+            </li>
+            <li role="presentation">
+                <a class="a-heading-tab" href="#MaterialsTehniques3" aria-controls="MaterialsTehniques3" role="tab" data-toggle="tab">
+                    Conservation and restoration works
+                </a>
+            </li>
+        </ul>
+    </div>
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade in active" id="MaterialsTehniques1">
+                {{> matherials_techniques_1}}
+            </div>
+            <div role="tabpanel" class="tab-pane fade in" id="MaterialsTehniques2">
+                {{> matherials_techniques_2}}
+            </div>
+            <div role="tabpanel" class="tab-pane fade in" id="MaterialsTehniques3">
+                {{> matherials_techniques_3}}
+            </div>
+        </div>
+    </div>
+</div>
+</template>

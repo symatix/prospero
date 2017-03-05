@@ -1,0 +1,104 @@
+<template name="material_xrf_files_1">
+<div class="row align-center">
+<div class="col-xs-12">
+  <h3>files</h3>
+</div>
+</div>
+<div class="row">
+  <div class="col-xs-12 col-sm-2 individual-property">PHOTO ONE
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="material_xrf_photoOne_label" class="upload_label" id="material_xrf_upload_photoOne">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="material_xrf_material_photoOne_label">
+  </div>
+  <div class="col-xs-12 col-sm-2 individual-property"> PHOTO TWO
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="material_xrf_photoTwo_label" class="upload_label" id="material_xrf_upload_photoTwo">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="material_xrf_photoTwo_label">
+  </div>
+  <div class="col-xs-12 col-sm-2 individual-property"> PHOTO THREE
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="material_xrf_photoThree_label" class="upload_label" id="material_xrf_upload_photoThree">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="material_xrf_photoThree_label">
+  </div>
+  <div class="col-xs-12 col-sm-2 individual-property"> PHOTO FOUR
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="material_xrf_photoFour_label" class="upload_label" id="material_xrf_upload_photoFour">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="material_xrf_photoFour_label">
+  </div>
+  <div class="col-xs-12 col-sm-8 individual-property"> UPLOAD RELEVANT FILES (e.g. treatment documentation, conservation report, etc.)
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="material_xrf_files_label" class="upload_label" id="material_xrf_upload_files">(.zip)</label>
+    <input class="individual-data-value" type="file" id="material_xrf_files_label">
+  </div>
+  <div class="col-xs-12">
+    &nbsp;
+  </div>
+</div>
+
+<!-- hidden part1 -->
+<div class="photoOne hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="material_xrf_photoOne3" placeholder="" value="{{materials.methods.xrf.files.photoOne}}">
+  </div>
+</div>
+<div class="photoOne_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="material_xrf_photoOne_id3" placeholder="" value="{{materials.methods.xrf.files.photoOne_id}}">
+  </div>
+</div>
+<!-- /hidden part1 -->
+<!-- hidden part 2-->
+<div class="photoTwo hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="material_xrf_photoTwo3" placeholder="" value="{{materials.methods.xrf.files.photoTwo}}">
+  </div>
+</div>
+<div class="photoTwo_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="material_xrf_photoTwo_id3" placeholder="" value="{{materials.methods.xrf.files.photoTwo_id}}">
+  </div>
+</div>
+<!-- /hidden part 2-->
+<!-- hidden part 3-->
+<div class="photoThree hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="material_xrf_photoThree3" placeholder="" value="{{materials.methods.xrf.files.photoThree}}">
+  </div>
+</div>
+<div class="photoThree_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="material_xrf_photoThree_id3" placeholder="" value="{{materials.methods.xrf.files.photoThree_id}}">
+  </div>
+</div>
+<!-- / hidden part 3-->
+<!-- hidden part4 -->
+<div class="photoFour hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="material_xrf_photoFour3" placeholder="" value="{{materials.methods.xrf.files.photoFour}}">
+  </div>
+</div>
+<div class="research_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="material_xrf_photoFour_id3" placeholder="" value="{{materials.methods.xrf.files.photoFour_id}}">
+  </div>
+</div>
+<!-- / hidden part4 -->
+<!-- hidden part 5-->
+<div class="detailsFiles hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="material_xrf_files3" placeholder="" value="{{materials.methods.xrf.files.files}}">
+  </div>
+</div>
+<div class="research_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="material_xrf_files_id3" placeholder="" value="{{materials.methods.xrf.files.files_id}}">
+  </div>
+</div>
+<!-- /hidden part 5-->
+
+</template>

@@ -1,0 +1,137 @@
+<template name="pigment_dye_binder_basic">
+  <div class="row relative basic-fix">
+    <button class="btn btn-default btn-toggle btn_toggleMaterialsBasic float-right">Colapse</button>
+    <h3 id="basic_href" >basic information</h3>
+  </div>
+  <div class="toggleMaterialsBasic">
+	<div class="row">
+	  <div class="col-xs-12 col-md-6 individual-property name">PIGMENT/DYE/BINDER/VARNISH/REFERENCE NAME
+	  </div>
+	  <div class="col-xs-12 col-md-6">
+	    <input type="text" class="individual-value individual-form" id="name" placeholder="(e.g. red lead, mastic, SS3186, etc.)" value="{{material.basic.name}}">
+	  </div>
+	  <div class="col-xs-12 col-md-6 individual-property altName">ALTERNATIVE NAMES AND NON-ENGLISH NAMES
+	  </div>
+	  <div class="col-xs-12 col-md-6"> 
+	    <input type="text" class="individual-value individual-form" id="altName" placeholder="(e.g. minium, Mennige (German), minio (Italian), etc.)" value="{{material.basic.altName}}">
+	  </div>
+	  <div class="col-xs-12 col-md-6 individual-property manufacturer">MANUFACTURER
+	  </div>
+	  <div class="col-xs-12 col-md-6">
+	    <input type="text" class="individual-value individual-form" id="investor" placeholder="(e.g. Kremer Pigmente Germany, unknown, etc.)" value="{{material.basic.manufacturer}}">
+	  </div>
+	  <div class="col-xs-12 col-md-6 individual-property chemicalName">CHEMICAL NAME
+	  </div>
+	  <div class="col-xs-12 col-md-6"> 
+	    <input type="text" class="individual-value individual-form" id="chemicalName" placeholder="(e.g. Lead(II,IV)-oxide)" value="{{material.basic.chemicalName}}">
+	  </div>
+	  <div class="col-xs-12 col-md-6 individual-property chemicalFormula">CHEMICAL FORMULA
+	  </div>
+	  <div class="col-xs-12 col-md-6"> 
+	    <input type="text" class="individual-value individual-form" id="chemicalFormula" placeholder="(e.g. 2CuCO3, SiO2(65%) + K20 (15%) + Al2O3 (5%) + CoO (10%),  etc.)" value="{{material.basic.chemicalFormula}}">
+	  </div>
+	  <div class="col-xs-12 col-md-6 individual-property refractiveIndex">REFRACTIVE INDEX
+	  </div>
+	  <div class="col-xs-12 col-md-6">
+	    <input type="text" class="individual-value individual-form upload_label" id="refractiveIndex" placeholder="" value="{{material.basic.refractiveIndex}}">
+	  </div>
+	  <div class="col-xs-12 col-md-6 individual-property colorIndex">COLOR INDEX
+	  </div>
+	  <div class="col-xs-12 col-md-6">
+	    <input type="text" class="individual-value individual-form upload_label" id="colorIndex" placeholder="" value="{{material.basic.colorIndex}}">
+	  </div>
+	  <div class="col-xs-12 col-md-6 individual-property relief">TYPE
+	  </div>
+	  <div class="col-xs-12 col-md-6 material_basic_type">
+	    <input type="radio" name="material_basic_type" id="natural" value="natural"> natural<br/>
+	    <input type="radio" name="material_basic_type" id="synthetic" value="synthetic"> synthetic<br/>
+	    <input type="radio" name="material_basic_type" id="naturalSyntetic" value="naturalSyntetic"> natural and syntetic<br/>
+	  </div>
+
+
+
+  <div class="col-xs-12 col-sm-12 individual-property individual-property align-center">PERIOD OF USE
+  </div>
+  <div class="col-xs-12 col-sm-6 individual-property density-weft">From
+  </div>
+  <div class="col-xs-12 col-md-6">
+		<select class="form-select" id="materials_period_from" value="{{material.basic.period.from}}">
+    		<option disabled selected style='display:none;'>Select...</option>
+			<option value="1">1th Cent.</option>
+			<option value="2">2th Cent</option>
+			<option value="3">3th Cent</option>
+			<option value="4">4th Cent</option>
+			<option value="5">5th Cent</option>
+			<option value="6">6th Cent</option>
+			<option value="7">7th Cent</option>
+			<option value="8">8th Cent</option>
+			<option value="9">9th Cent</option>
+			<option value="10">10th Cent</option>
+			<option value="11">11th Cent</option>
+			<option value="12">12th Cent</option>
+			<option value="13">13th Cent</option>
+			<option value="14">14th Cent</option>
+			<option value="15">15th Cent</option>
+			<option value="16">16th Cent</option>
+			<option value="17">17th Cent</option>
+			<option value="18">18th Cent</option>
+			<option value="19">19th Cent</option>
+			<option value="20">20th Cent</option>
+			<option value="21">21th Cent</option>
+			<option value="22">Today</option> <!-- future, beware -->
+		</select>
+  </div>
+  <div class="col-xs-12 col-sm-6 individual-property density-warp">To
+  </div>
+  <div class="col-xs-12 col-md-6">
+		<select class="form-select" id="materials_period_to" value="{{material.basic.period.to}}">
+    		<option disabled selected style='display:none;'>Select...</option>
+			<option value="1">1th Cent.</option>
+			<option value="2">2th Cent</option>
+			<option value="3">3th Cent</option>
+			<option value="4">4th Cent</option>
+			<option value="5">5th Cent</option>
+			<option value="6">6th Cent</option>
+			<option value="7">7th Cent</option>
+			<option value="8">8th Cent</option>
+			<option value="9">9th Cent</option>
+			<option value="10">10th Cent</option>
+			<option value="11">11th Cent</option>
+			<option value="12">12th Cent</option>
+			<option value="13">13th Cent</option>
+			<option value="14">14th Cent</option>
+			<option value="15">15th Cent</option>
+			<option value="16">16th Cent</option>
+			<option value="17">17th Cent</option>
+			<option value="18">18th Cent</option>
+			<option value="19">19th Cent</option>
+			<option value="20">20th Cent</option>
+			<option value="21">21th Cent</option>
+			<option value="22">Today</option>
+		</select>
+  </div>
+
+
+
+
+	  <div class="col-xs-12">
+	    &nbsp;
+	  </div>
+	</div>
+	<div class="row align-center">
+	  <div class="col-xs-12 notes">Sources
+	  </div>
+	  <div class="col-sm-8 col-sm-offset-2">
+	      <textarea class="" id="comments3" name="comments3" rows="4" placeholder="(literature)" value="{{material.basic.notes.sources}}"></textarea>
+	  </div>
+	  <div class="col-xs-12 notes">Brief description of pigment/dye/binder/varnish and history of use 
+	  </div>
+	  <div class="col-sm-8 col-sm-offset-2">
+	      <textarea class="" id="comments3" name="comments3" rows="4" placeholder="(up to 1000 characters)" value="{{material.basic.notes.briefDescription}}"></textarea>
+	  </div>
+	  <div class="col-xs-12">
+	    &nbsp;
+	  </div>
+	</div>
+	</div>
+</template>
