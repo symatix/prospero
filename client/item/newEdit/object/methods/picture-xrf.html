@@ -9,42 +9,42 @@
     <div class="col-xs-12 col-md-6 individual-property xrfExperimental">EXPERIMENTAL PARAMETERS
     </div>
     <div class="col-xs-12 col-md-6">
-      <input type="text" class="individual-value individual-form" id="xrfExperimental" placeholder="(e.g. X-ray tube voltage, laser wavelength, air/vacuum, etc.)" value="{{picture.details.methods.xrf.experimentalParameters}}">
+      <input type="text" class="individual-value individual-form" id="xrfExperimental" placeholder="(e.g. X-ray tube voltage, laser wavelength, air/vacuum, etc.)" value="{{details.methods.xrf.experimentalParameters}}">
     </div>
     <div class="col-xs-12 col-md-6 individual-property xrfElements">ELEMENTS DETERMINED
     </div>
     <div class="col-xs-12 col-md-6"> 
-      <input type="text" class="individual-value individual-form" id="xrfElements" placeholder="(e.g. cobalt blue, red ochre, indigo, etc.)" value="{{picture.details.methods.xrf.elements}}">
+      <input type="text" class="individual-value individual-form" id="xrfElements" placeholder="(e.g. cobalt blue, red ochre, indigo, etc.)" value="{{details.methods.xrf.elements}}">
     </div>
     <div class="col-xs-12 col-md-6 individual-property xrfFormulae">CHEMICAL FORMULAE DETERMINED
     </div>
     <div class="col-xs-12 col-md-6"> 
-      <input type="text" class="individual-value individual-form" id="xrfFormulae" placeholder="" value="{{picture.details.methods.xrf.formulae}}">
+      <input type="text" class="individual-value individual-form" id="xrfFormulae" placeholder="" value="{{details.methods.xrf.formulae}}">
     </div>
     <div class="col-xs-12 col-md-6 individual-property xrfPigmentsDyes">PIGMENTS/DYES IDENTIFIED
     </div>
     <div class="col-xs-12 col-md-6">
-      <input type="text" class="individual-value individual-form" id="xrfPigmentsDyes" placeholder="" value="{{picture.details.methods.xrf.pigmentsDyes}}">
+      <input type="text" class="individual-value individual-form" id="xrfPigmentsDyes" placeholder="" value="{{details.methods.xrf.pigmentsDyes}}">
     </div>
     <div class="col-xs-12 col-md-6 individual-property xrfPriming">PRIMING IDENTIFIED
     </div>
     <div class="col-xs-12 col-md-6">
-      <input type="text" class="individual-value individual-form" id="xrfPriming" placeholder="" value="{{picture.details.methods.xrf.priming}}">
+      <input type="text" class="individual-value individual-form" id="xrfPriming" placeholder="" value="{{details.methods.xrf.priming}}">
     </div>
     <div class="col-xs-12 col-md-6 individual-property xrfBindingMedia">BINDING MEDIA IDENTIFIED
     </div>
     <div class="col-xs-12 col-md-6">
-      <input type="text" class="individual-value individual-form" id="xrfBindingMedia" placeholder="" value="{{picture.details.methods.xrf.bindingMedia}}">
+      <input type="text" class="individual-value individual-form" id="xrfBindingMedia" placeholder="" value="{{details.methods.xrf.bindingMedia}}">
     </div>
     <div class="col-xs-12 col-md-6 individual-property xrfVarnish">VARNISH IDENTIFIED
     </div>
     <div class="col-xs-12 col-md-6">
-      <input type="text" class="individual-value individual-form" id="xrfVarnish" placeholder="" value="{{picture.details.methods.xrf.varnish}}">
+      <input type="text" class="individual-value individual-form" id="xrfVarnish" placeholder="" value="{{details.methods.xrf.varnish}}">
     </div>
     <div class="col-xs-12 col-md-6 individual-property xrfStretcherSupportStrainer">STRETCHER/SUPPORT/STRAINER IDENTIFIED
     </div>
     <div class="col-xs-12 col-md-6">
-      <input type="text" class="individual-value individual-form" id="xrfStretcherSupportStrainer" placeholder="" value="{{picture.details.methods.xrf.stretcherSupportStrainer}}">
+      <input type="text" class="individual-value individual-form" id="xrfStretcherSupportStrainer" placeholder="" value="{{details.methods.xrf.stretcherSupportStrainer}}">
     </div>
     <div class="col-xs-12">
       &nbsp;
@@ -54,17 +54,17 @@
     <div class="col-xs-12 notes">Brief info about possible multilayers/underpaintings/retouches
     </div>
     <div class="col-sm-8 col-sm-offset-2">
-        <textarea class="" id="comments1" name="sources" rows="4" placeholder="(e.g. secondary effects from underlying signal sources)" value="{{picture.details.methods.xrf.notes.multilayers}}"></textarea>
+        <textarea class="" id="comments1" name="sources" rows="4" placeholder="(e.g. secondary effects from underlying signal sources)" value="{{details.methods.xrf.notes.multilayers}}"></textarea>
     </div>
     <div class="col-xs-12 notes">Comments
     </div>
     <div class="col-sm-8 col-sm-offset-2">
-        <textarea class="" id="comments1" name="sources" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{picture.details.methods.xrf.notes.comments}}"></textarea>
+        <textarea class="" id="comments1" name="sources" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.xrf.notes.comments}}"></textarea>
     </div>
     <div class="col-xs-12 notes">Sources
     </div>
     <div class="col-sm-8 col-sm-offset-2">
-        <textarea class="" id="sources1" name="sources" rows="4" placeholder="(literature)" value="{{picture.details.methods.xrf.notes.sources}}"></textarea>
+        <textarea class="" id="sources1" name="sources" rows="4" placeholder="(literature)" value="{{details.methods.xrf.notes.sources}}"></textarea>
     </div>
     <div class="col-xs-12">
       &nbsp;
@@ -73,14 +73,14 @@
 
 
 
-  {{> item_files_details_1}}
+  <p> upload form - dinamic </p>
 
 
   <div class="row align-center">
     <div class="col-xs-12 notes">Figure captions
     </div>
     <div class="col-sm-8 col-sm-offset-2">
-        <textarea class="" id="figureCaption1" name="history" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{picture.details.methods.xrf.files.figureCaption}}"></textarea>
+        <textarea class="" id="figureCaption1" name="history" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.xrf.files.figureCaption}}"></textarea>
     </div>
     <br/>
   </div>

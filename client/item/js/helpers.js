@@ -8,6 +8,9 @@ Template.item_new.helpers({
     } else {
       return false;
     }
+  },
+  data:function(){
+    return Data.find();
   }
 })
 Template.item_details.helpers({

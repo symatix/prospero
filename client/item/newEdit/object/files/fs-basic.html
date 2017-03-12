@@ -9,67 +9,70 @@
     <label for="data_img_front" class="upload_label" id="upload_front">(.jpg or .tiff, max size 5 mb)</label>
       <input class="individual-data-value" type="file" id="data_img_front">
     </div>
+    
     <div class="col-xs-12 col-sm-2 individual-property">BACK IMAGE
     </div>
     <div class="col-xs-12 col-sm-4">
     <label for="data_img_back" class="upload_label" id="upload_back">(.jpg or .tiff, max size 5 mb)</label>
       <input class="individual-data-value" type="file" id="data_img_back">
     </div>
+
     <div class="col-xs-12 col-sm-2 individual-property">SIDE IMAGE
     </div>
     <div class="col-xs-12 col-sm-4">
-    <label for="research" class="upload_label" id="upload_side">(.jpg or .tiff, max size 5 mb)</label>
-      <input class="individual-data-value" type="file" id="research">
+    <label for="data_img_side" class="upload_label" id="upload_side">(.jpg or .tiff, max size 5 mb)</label>
+      <input class="individual-data-value" type="file" id="data_img_side">
     </div>
+
     <div class="col-xs-12 col-sm-2 individual-property"> SIGNATURE
     </div>
     <div class="col-xs-12 col-sm-4">
-    <label for="research" class="upload_label" id="upload_signature">(.jpg or .tiff, max size 5 mb)</label>
-      <input class="individual-data-value" type="file" id="research">
+    <label for="data_img_sig" class="upload_label" id="upload_signature">(.jpg or .tiff, max size 5 mb)</label>
+      <input class="individual-data-value" type="file" id="data_img_sig">
     </div>
 
     <!-- hidden part 1-->
     <div class="img_front hidden">
       <div class="individual-property">IMAGE: FRONT
-        <input type="text" class="individual-value individual-form" id="img_front" placeholder="" value="{{picture.data.imgs.img_front}}">
+        <input type="text" class="individual-value individual-form" id="img_front" placeholder="" value="{{data.imgs.front}}">
       </div>
     </div>
     <div class="img_front_id hidden">
       <div class="individual-property">IMAGE: FRONT ID
-        <input type="text" class="individual-value individual-form" id="img_front_id" placeholder="" value="{{picture.data.imgs.img_front_id}}">
+        <input type="text" class="individual-value individual-form" id="img_front_id" placeholder="" value="{{data.imgs.img_front_id}}">
       </div>
     </div>
     <!-- hidden part 2-->
     <div class="img_back hidden">
       <div class="individual-property">IMAGE: BACK
-        <input type="text" class="individual-value individual-form" id="img_back" placeholder="" value="{{picture.data.imgs.img_back}}">
+        <input type="text" class="individual-value individual-form" id="img_back" placeholder="" value="{{data.imgs.back}}">
       </div>
     </div>
     <div class="img_back_id hidden">
       <div class="individual-property">IMAGE: BACK ID
-        <input type="text" class="individual-value individual-form" id="img_back_id" placeholder="" value="{{picture.data.imgs.img_back_id}}">
+        <input type="text" class="individual-value individual-form" id="img_back_id" placeholder="" value="{{data.imgs.back_id}}">
       </div>
     </div>
     <!-- hidden part 3-->
     <div class="research hidden">
       <div class="individual-property">SIDE IMAGE URL
-        <input type="text" class="individual-value individual-form" id="img_side" placeholder="" value="{{picture.data.imgs.img_side}}">
+        <input type="text" class="individual-value individual-form" id="img_side" placeholder="" value="{{data.imgs.side}}">
       </div>
     </div>
     <div class="research_id hidden">
       <div class="individual-property">SIDE IMAGE ID
-        <input type="text" class="individual-value individual-form" id="img_side_id" placeholder="" value="{{picture.data.imgs.img_side_id}}">
+        <input type="text" class="individual-value individual-form" id="img_side_id" placeholder="" value="{{data.imgs.side_id}}">
       </div>
     </div>
     <!-- hidden part 4-->
     <div class="research hidden">
       <div class="individual-property">SIGNATURE URL
-        <input type="text" class="individual-value individual-form" id="img_signature" placeholder="" value="{{picture.data.imgs.img_signature}}">
+        <input type="text" class="individual-value individual-form" id="img_signature" placeholder="" value="{{data.imgs.signature}}">
       </div>
     </div>
     <div class="research_id hidden">
       <div class="individual-property">SIGNATURE ID
-        <input type="text" class="individual-value individual-form" id="img_signature_id" placeholder="" value="{{picture.data.imgs.img_signature_id}}">
+        <input type="text" class="individual-value individual-form" id="img_signature_id" placeholder="" value="{{data.imgs.signature_id}}">
       </div>
     </div>
     <!-- /hidden part -->

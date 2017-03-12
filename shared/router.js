@@ -46,7 +46,7 @@ Router.route("/gallery/details/:_id", function(){
 Router.route("/gallery/edit/:_id", function(){
   Session.set("itemId", this.params._id);
   this.render('navbar', {to:"header"});
-  this.render('editorEdit', {to:"main",
+  this.render('item_new', {to:"main",
     data: function(){
         return Prospero.findOne({_id:this.params._id});
       }
@@ -66,7 +66,7 @@ Router.route("/admin/details/:_id", function(){
 Router.route("/admin/edit/:_id", function(){
   Session.set("itemId", this.params._id);
   this.render('navbar', {to:"header"});
-  this.render('adminEdit', {to:"main",
+  this.render('item_new', {to:"main",
     data: function(){
         return Prospero.findOne({_id:this.params._id});
       }

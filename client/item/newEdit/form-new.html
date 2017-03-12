@@ -1,74 +1,85 @@
 <template name="form_research">
 
-<div class="row form-box">
+<div class="row">
     <ul class="nav nav-tabs nav-justified" role="tablist" id="form-basic-select">
         <li role="presentation">
             <a class="a-heading-tab" href="#painting" aria-controls="painting" role="tab" data-toggle="tab">
-                <input type="checkbox" name="painting" value="painting" class="hidden">
+                <input type="checkbox" name="painting" value="Painting" class="objectType hidden" id="item_painting">
                 Painting<br/>&nbsp;
             </a>
         </li>
         <li role="presentation">
             <a class="a-heading-tab" href="#sculpture" aria-controls="sculpture" role="tab" data-toggle="tab">
-                <input type="checkbox" name="sculpture" value="sculpture" class="hidden">
+                <input type="checkbox" name="sculpture" value="Sculpture" class="objectType hidden" id="item-sculpture">
                 Sculpture<br/>&nbsp;
             </a>
         </li>
         <li role="presentation">
-            <a class="a-heading-tab" href="#object-site" aria-controls="object-site" role="tab" data-toggle="tab">
-                <input type="checkbox" name="object-site" value="object-site" class="hidden">
+            <a class="a-heading-tab" href="#architectural-heritage" aria-controls="architectural-heritage" role="tab" data-toggle="tab">
+                <input type="checkbox" name="object-site" value="Architectural heritage" class="objectType hidden" id="item-architectural-heritage">
                 Architectural heritage
             </a>
         </li>
         <li role="presentation">
-            <a class="a-heading-tab" href="#sample-crosssection" aria-controls="sample-crosssection" role="tab" data-toggle="tab">
-                <input type="checkbox" name="archival-object" value="archival-object" class="hidden">
+            <a class="a-heading-tab" href="#archival-object" aria-controls="archival-object" role="tab" data-toggle="tab">
+                <input type="checkbox" name="archival-object" value="Archival object" class="objectType hidden" id="item-archival-object">
                 Archival object
             </a>
         </li>
         <li role="presentation">
             <a class="a-heading-tab" href="#sample-crosssection" aria-controls="sample-crosssection" role="tab" data-toggle="tab">
-                <input type="checkbox" name="archaeological-object" value="archaeological-object" class="hidden">
+                <input type="checkbox" name="archaeological-object" value="Archaeological object" class="objectType hidden" id="item-crosssection">
                 Archaeological object
             </a>
         </li>
         <li role="presentation">
             <a class="a-heading-tab" href="#sample-crosssection" aria-controls="sample-crosssection" role="tab" data-toggle="tab">
-                <input type="checkbox" name="sample-crosssection" value="sample-crosssection" class="hidden">
+                <input type="checkbox" name="sample-crosssection" value="Sample/cross-section" class="objectType hidden" id="item-sample-crosssection">
                 Sample/cross-section
             </a>
         </li>
         <li role="presentation">
             <a class="a-heading-tab" href="#pigment-dye-binder" aria-controls="pigment-dye-binder" role="tab" data-toggle="tab">
-                <input type="checkbox" name="pigment-dye-binder-varnish-reference" value="pigment-dye-binder-varnish-reference" class="hidden">
+                <input type="checkbox" name="pigment-dye-binder-varnish-reference" value="Pigment/dye/binder/varnish/reference materials" class="objectType hidden" id="item-pigment-dye-binder">
                 Pigment/dye/binder/varnish/<br/>reference materials
             </a>
         </li>
         <li role="presentation">
             <a class="a-heading-tab" href="#other" aria-controls="other" role="tab" data-toggle="tab">
-                <input type="checkbox" name="other" value="other" class="hidden">
+                <input type="checkbox" name="other" value="other" class="objectType hidden" id="item-other">
                 Other<br/>&nbsp;
             </a>
         </li>
     </ul>
         <div class="tab-content">
             <div role="tabpanel" class="tab-pane fade in" id="painting">
-                {{> picture_basic}}
+                {{> object_basic}}
             </div>
             <div role="tabpanel" class="tab-pane fade in" id="sculpture">
-                {{> picture_basic}}
+                {{> object_basic}}
+            </div>
+            <div role="tabpanel" class="tab-pane fade in" id="architectural-heritage">
+                {{> object_basic}}
+            </div>
+            <div role="tabpanel" class="tab-pane fade in" id="archival-object">
+                {{> object_basic}}
             </div>
             <div role="tabpanel" class="tab-pane fade in" id="object-site">
-                <h1>[input fileds]</h1>
+                {{> object_basic}}
             </div>
             <div role="tabpanel" class="tab-pane fade in" id="sample-crosssection">
-                <h1>[input fileds]</h1>
+                {{> object_basic}}
             </div>
             <div role="tabpanel" class="tab-pane fade in" id="pigment-dye-binder">
                 {{> pigment_dye_binder}}
             </div>
             <div role="tabpanel" class="tab-pane fade in" id="other">
-                <h1>[input fileds]</h1>
+            <br/>
+                <div class="col-xs-12 col-md-offset-3 col-md-6">
+                    <input type="text" class="individual-value individual-form" id="objectType" placeholder="[type of object]" value="{{type}}">
+                </div>
+                <br/>
+                {{> object_basic}}
             </div>
         </div>
 </div>
@@ -80,6 +91,7 @@ $('#form-basic-select li').click(function (e) {
  // $(this).tab('show');
      $(this).closest('ul').find('input[type="checkbox"]').prop('checked','');
      $(this).closest('li').find('input[type="checkbox"]').prop('checked','checked');
+     $(".upload-progress").css({"display":"block"});
    
 });
 </script>

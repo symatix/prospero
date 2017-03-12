@@ -27,3 +27,4 @@ easy:search
 cfs:standard-packages
 cfs:filesystem
 ostrio:meteor-root
+cfs:ui
