@@ -1,166 +1,6 @@
-Meteor.myFunctions = {
-  dateFormat:function(){
-    Date.prototype.getHoursCustom = function(){
-      var retval = this.getHours();
-      if (retval < 10) {
-          return ("0" + retval.toString());
-      } else {
-          return retval.toString();
-      }
-    }
-    Date.prototype.getMinutesCustom = function(){
-      var retval = this.getMinutes();
-      if (retval < 10) {
-          return ("0" + retval.toString());
-      } else {
-          return retval.toString();
-      }
-    }
-    Date.prototype.getSecondsTwoCustom = function(){
-      var retval = this.getSeconds();
-      if (retval < 10) {
-          return ("0" + retval.toString());
-      } else {
-          return retval.toString();
-      }
-    }
-    var date = new Date();
-    var dateFormat = (date.getMonth() + 1) + '.' + date.getDate() + '.' +  date.getFullYear() + '. '+date.getHoursCustom() + ':' + date.getMinutesCustom() + ':' + date.getSecondsTwoCustom();
-    return dateFormat;
-  },
-clearIndividualValues: function(){
-    event.target.author.value = '';
-    event.target.title.value = '';
-    event.target.date.value = '';
-    event.target.period_style.value = '';
-    event.target.collection_owner.value = '';
-    event.target.museum_gallery.value = '';
-    event.target.painting_technique.value = '';
-    event.target.stretcher.value = '';
-    event.target.support.value = '';
-    event.target.priming.value = '';
-    event.target.paint_layer.value = '';
-    event.target.varnish.value = '';
-    event.target.img_front.value ='',
-    event.target.img_back.value =''
-  },
-  insertData: function(){
-// clear all placeholders before input
-//    $('form').submit(function() {
-//            $(this).find('.individual-value').each(function() {
-//                $(this).val('');
-//            });
-//    });
-
+/*
 ////////////////////////////////////////////////////////////////////////////////////////
-    $(':input').removeAttr('placeholder');
-    if(!$('#aas').is(':checked')){
 
-      var aasDetails = false;
-      
-    } else {
-
-      var aasDetails = {
-          experimentalParameters:document.getElementById("object_aasExperimental").value,
-          elements:document.getElementById("object_aasElements").value,
-          formulae:document.getElementById("object_aasFormulae").value,
-          pigmentsDyes:document.getElementById("object_aasPigmentsDyes").value,
-          priming:document.getElementById("object_aasPriming").value,
-          bindingMedia:document.getElementById("object_aasBindingMedia").value,
-          varnish:document.getElementById("object_aasVarnish").value,
-          stretcherSupportStrainer:document.getElementById("object_aasStretcherSupportStrainer").value,
-          notes:{
-            brief:document.getElementById("object_aasBrief").value,
-            comments:document.getElementById("object_aasComments").value,
-            sources:document.getElementById("object_aasSources").value,
-            caption:document.getElementById("object_aasCaption").value,
-          },
-          files:{
-            aasFiles1:document.getElementById("aasFiles1").value,
-            aasFiles1_id:document.getElementById("aasFiles1_id").value,
-            aasFiles2:document.getElementById("aasFiles2").value,
-            aasFiles2_id:document.getElementById("aasFiles2_id").value,
-            aasFiles3:document.getElementById("aasFiles3").value,
-            aasFiles3_id:document.getElementById("aasFiles3_id").value,
-            aasFiles4:document.getElementById("aasFiles4").value,
-            aasFiles4_id:document.getElementById("aasFiles4_id").value,
-            aasFiles5:document.getElementById("aasFiles5").value,
-            aasFiles5_id:document.getElementById("aasFiles5_id").value,
-          }
-      }
-    }
-////////////////////////////////////////////////////////////////////////////////////////    
-  if(!$('#aes').is(':checked')){
-
-      var aesDetails = false;
-      
-    } else {
-
-      var aesDetails = {
-          experimentalParameters:document.getElementById("object_aesExperimental").value,
-          elements:document.getElementById("object_aesElements").value,
-          formulae:document.getElementById("object_aesFormulae").value,
-          pigmentsDyes:document.getElementById("object_aesPigmentsDyes").value,
-          priming:document.getElementById("object_aesPriming").value,
-          bindingMedia:document.getElementById("object_aesBindingMedia").value,
-          varnish:document.getElementById("object_aesVarnish").value,
-          stretcherSupportStrainer:document.getElementById("object_aesStretcherSupportStrainer").value,
-          notes:{
-            brief:document.getElementById("objectae_aesBrief").value,
-            comments:document.getElementById("object_aesComments").value,
-            sources:document.getElementById("object_aesSources").value,
-            caption:document.getElementById("object_aesCaption").value,
-          },
-          files:{
-            aesFiles1:document.getElementById("aesFiles1").value,
-            aesFiles1_id:document.getElementById("aesFiles1_id").value,
-            aesFiles2:document.getElementById("aesFiles2").value,
-            aesFiles2_id:document.getElementById("aesFiles2_id").value,
-            aesFiles3:document.getElementById("aesFiles3").value,
-            aesFiles3_id:document.getElementById("aesFiles3_id").value,
-            aesFiles4:document.getElementById("aesFiles4").value,
-            aesFiles4_id:document.getElementById("aesFiles4_id").value,
-            aesFiles5:document.getElementById("aesFiles5").value,
-            aesFiles5_id:document.getElementById("aesFiles5_id").value,
-          }
-      }
-    }
-////////////////////////////////////////////////////////////////////////////////////////    
-  if(!$('#afm').is(':checked')){
-
-      var afmDetails = false;
-      
-    } else {
-
-      var afmDetails = {
-          experimentalParameters:document.getElementById("object_afmExperimental").value,
-          elements:document.getElementById("object_afmElements").value,
-          formulae:document.getElementById("object_afmFormulae").value,
-          pigmentsDyes:document.getElementById("object_afmPigmentsDyes").value,
-          priming:document.getElementById("object_afmPriming").value,
-          bindingMedia:document.getElementById("object_afmBindingMedia").value,
-          varnish:document.getElementById("object_afmVarnish").value,
-          stretcherSupportStrainer:document.getElementById("object_afmStretcherSupportStrainer").value,
-          notes:{
-            brief:document.getElementById("object_afmBrief").value,
-            comments:document.getElementById("object_afmComments").value,
-            sources:document.getElementById("object_afmSources").value,
-            caption:document.getElementById("object_afmCaption").value,
-          },
-          files:{
-            afmFiles1:document.getElementById("afmFiles1").value,
-            afmFiles1_id:document.getElementById("afmFiles1_id").value,
-            afmFiles2:document.getElementById("afmFiles2").value,
-            afmFiles2_id:document.getElementById("afmFiles2_id").value,
-            afmFiles3:document.getElementById("afmFiles3").value,
-            afmFiles3_id:document.getElementById("afmFiles3_id").value,
-            afmFiles4:document.getElementById("afmFiles4").value,
-            afmFiles4_id:document.getElementById("afmFiles4_id").value,
-            afmFiles5:document.getElementById("afmFiles5").value,
-            afmFiles5_id:document.getElementById("afmFiles5_id").value,
-          }
-      }
-    }////////////////////////////////////////////////////////////////////////////////////////
     if(!$('#analysis').is(':checked')){
 
       var analysisDetails = false;
@@ -177,10 +17,9 @@ clearIndividualValues: function(){
           varnish:document.getElementById("object_analysisVarnish").value,
           stretcherSupportStrainer:document.getElementById("object_analysisStretcherSupportStrainer").value,
           notes:{
-            brief:document.getElementById("object_analysisBrief").value,
-            comments:document.getElementById("object_analysisComments").value,
-            sources:document.getElementById("object_analysisSources").value,
-            caption:document.getElementById("object_analysisCaption").value,
+            multilayers:document.getElementById("object_brief_1").value,
+            comments:document.getElementById("object_comments1").value,
+            sources:document.getElementById("object_sources1").value,
           },
           files:{
             analysisFiles1:document.getElementById("analysisFiles1").value,
@@ -213,10 +52,9 @@ clearIndividualValues: function(){
           varnish:document.getElementById("object_binderFillerVarnish").value,
           stretcherSupportStrainer:document.getElementById("object_binderFillerStretcherSupportStrainer").value,
           notes:{
-            brief:document.getElementById("object_binderFillerBrief").value,
-            comments:document.getElementById("object_binderFillerComments").value,
-            sources:document.getElementById("object_binderFillerSources").value,
-            caption:document.getElementById("object_binderFillerCaption").value,
+            multilayers:document.getElementById("object_brief_1").value,
+            comments:document.getElementById("object_comments1").value,
+            sources:document.getElementById("object_sources1").value,
           },
           files:{
             binderFillerFiles1:document.getElementById("binderFillerFiles1").value,
@@ -249,10 +87,9 @@ clearIndividualValues: function(){
           varnish:document.getElementById("object_c_14Varnish").value,
           stretcherSupportStrainer:document.getElementById("object_c_14StretcherSupportStrainer").value,
           notes:{
-            brief:document.getElementById("object_c_14Brief").value,
-            comments:document.getElementById("object_c_14Comments").value,
-            sources:document.getElementById("object_c_14Sources").value,
-            caption:document.getElementById("object_c_14Caption").value,
+            multilayers:document.getElementById("object_brief_1").value,
+            comments:document.getElementById("object_comments1").value,
+            sources:document.getElementById("object_sources1").value,
           },
           files:{
             c_14Files1:document.getElementById("c_14Files1").value,
@@ -285,10 +122,9 @@ clearIndividualValues: function(){
           varnish:document.getElementById("object_drmsVarnish").value,
           stretcherSupportStrainer:document.getElementById("object_drmsStretcherSupportStrainer").value,
           notes:{
-            brief:document.getElementById("object_drmsBrief").value,
-            comments:document.getElementById("object_drmsComments").value,
-            sources:document.getElementById("object_drmsSources").value,
-            caption:document.getElementById("object_drmsCaption").value,
+            multilayers:document.getElementById("object_brief_1").value,
+            comments:document.getElementById("object_comments1").value,
+            sources:document.getElementById("object_sources1").value,
           },
           files:{
             drmsFiles1:document.getElementById("drmsFiles1").value,
@@ -321,10 +157,9 @@ clearIndividualValues: function(){
           varnish:document.getElementById("object_forsVarnish").value,
           stretcherSupportStrainer:document.getElementById("object_forsStretcherSupportStrainer").value,
           notes:{
-            brief:document.getElementById("object_forsBrief").value,
-            comments:document.getElementById("object_forsComments").value,
-            sources:document.getElementById("object_forsSources").value,
-            caption:document.getElementById("object_forsCaption").value,
+            multilayers:document.getElementById("object_brief_1").value,
+            comments:document.getElementById("object_comments1").value,
+            sources:document.getElementById("object_sources1").value,
           },
           files:{
             forsFiles1:document.getElementById("forsFiles1").value,
@@ -357,10 +192,9 @@ clearIndividualValues: function(){
           varnish:document.getElementById("object_fr_irVarnish").value,
           stretcherSupportStrainer:document.getElementById("object_fr_irStretcherSupportStrainer").value,
           notes:{
-            brief:document.getElementById("object_fr_irBrief").value,
-            comments:document.getElementById("object_fr_irComments").value,
-            sources:document.getElementById("object_fr_irSources").value,
-            caption:document.getElementById("object_fr_irCaption").value,
+            multilayers:document.getElementById("object_brief_1").value,
+            comments:document.getElementById("object_comments1").value,
+            sources:document.getElementById("object_sources1").value,
           },
           files:{
             fr_irFiles1:document.getElementById("fr_irFiles1").value,
@@ -393,10 +227,9 @@ clearIndividualValues: function(){
           varnish:document.getElementById("object_gc_msVarnish").value,
           stretcherSupportStrainer:document.getElementById("object_gc_msStretcherSupportStrainer").value,
           notes:{
-            brief:document.getElementById("object_gc_msBrief").value,
-            comments:document.getElementById("object_gc_msComments").value,
-            sources:document.getElementById("object_gc_msSources").value,
-            caption:document.getElementById("object_gc_msCaption").value,
+            multilayers:document.getElementById("object_brief_1").value,
+            comments:document.getElementById("object_comments1").value,
+            sources:document.getElementById("object_sources1").value,
           },
           files:{
             gc_msFiles1:document.getElementById("gc_msFiles1").value,
@@ -429,10 +262,9 @@ clearIndividualValues: function(){
           varnish:document.getElementById("object_glVarnish").value,
           stretcherSupportStrainer:document.getElementById("object_glStretcherSupportStrainer").value,
           notes:{
-            brief:document.getElementById("object_glBrief").value,
-            comments:document.getElementById("object_glComments").value,
-            sources:document.getElementById("object_glSources").value,
-            caption:document.getElementById("object_glCaption").value,
+            multilayers:document.getElementById("object_brief_1").value,
+            comments:document.getElementById("object_comments1").value,
+            sources:document.getElementById("object_sources1").value,
           },
           files:{
             glFiles1:document.getElementById("glFiles1").value,
@@ -465,10 +297,9 @@ clearIndividualValues: function(){
           varnish:document.getElementById("object_granulometryVarnish").value,
           stretcherSupportStrainer:document.getElementById("object_granulometryStretcherSupportStrainer").value,
           notes:{
-            brief:document.getElementById("object_granulometryBrief").value,
-            comments:document.getElementById("object_granulometryComments").value,
-            sources:document.getElementById("object_granulometrySources").value,
-            caption:document.getElementById("object_granulometryCaption").value,
+            multilayers:document.getElementById("object_brief_1").value,
+            comments:document.getElementById("object_comments1").value,
+            sources:document.getElementById("object_sources1").value,
           },
           files:{
             granulometryFiles1:document.getElementById("granulometryFiles1").value,
@@ -501,10 +332,9 @@ clearIndividualValues: function(){
           varnish:document.getElementById("object_hygroscopicVarnish").value,
           stretcherSupportStrainer:document.getElementById("object_hygroscopicStretcherSupportStrainer").value,
           notes:{
-            brief:document.getElementById("object_hygroscopicBrief").value,
-            comments:document.getElementById("object_hygroscopicComments").value,
-            sources:document.getElementById("object_hygroscopicSources").value,
-            caption:document.getElementById("object_hygroscopicCaption").value,
+            multilayers:document.getElementById("object_brief_1").value,
+            comments:document.getElementById("object_comments1").value,
+            sources:document.getElementById("object_sources1").value,
           },
           files:{
             hygroscopicFiles1:document.getElementById("hygroscopicFiles1").value,
@@ -537,10 +367,9 @@ clearIndividualValues: function(){
           varnish:document.getElementById("object_irpIrrIrfcVarnish").value,
           stretcherSupportStrainer:document.getElementById("object_irpIrrIrfcStretcherSupportStrainer").value,
           notes:{
-            brief:document.getElementById("object_irpIrrIrfcBrief").value,
-            comments:document.getElementById("object_irpIrrIrfcComments").value,
-            sources:document.getElementById("object_irpIrrIrfcSources").value,
-            caption:document.getElementById("object_irpIrrIrfcCaption").value,
+            multilayers:document.getElementById("object_brief_1").value,
+            comments:document.getElementById("object_comments1").value,
+            sources:document.getElementById("object_sources1").value,
           },
           files:{
             irpIrrIrfcFiles1:document.getElementById("irpIrrIrfcFiles1").value,
@@ -573,10 +402,9 @@ clearIndividualValues: function(){
           varnish:document.getElementById("object_libsVarnish").value,
           stretcherSupportStrainer:document.getElementById("object_libsStretcherSupportStrainer").value,
           notes:{
-            brief:document.getElementById("object_libsBrief").value,
-            comments:document.getElementById("object_libsComments").value,
-            sources:document.getElementById("object_libsSources").value,
-            caption:document.getElementById("object_libsCaption").value,
+            multilayers:document.getElementById("object_brief_1").value,
+            comments:document.getElementById("object_comments1").value,
+            sources:document.getElementById("object_sources1").value,
           },
           files:{
             libsFiles1:document.getElementById("libsFiles1").value,
@@ -609,10 +437,9 @@ clearIndividualValues: function(){
           varnish:document.getElementById("object_omVarnish").value,
           stretcherSupportStrainer:document.getElementById("object_omStretcherSupportStrainer").value,
           notes:{
-            brief:document.getElementById("object_omBrief").value,
-            comments:document.getElementById("object_omComments").value,
-            sources:document.getElementById("object_omSources").value,
-            caption:document.getElementById("object_omCaption").value,
+            multilayers:document.getElementById("object_brief_1").value,
+            comments:document.getElementById("object_comments1").value,
+            sources:document.getElementById("object_sources1").value,
           },
           files:{
             omFiles1:document.getElementById("omFiles1").value,
@@ -645,10 +472,9 @@ clearIndividualValues: function(){
           varnish:document.getElementById("object_pigeVarnish").value,
           stretcherSupportStrainer:document.getElementById("object_pigeStretcherSupportStrainer").value,
           notes:{
-            brief:document.getElementById("object_pigeBrief").value,
-            comments:document.getElementById("object_pigeComments").value,
-            sources:document.getElementById("object_pigeSources").value,
-            caption:document.getElementById("object_pigeCaption").value,
+            multilayers:document.getElementById("object_brief_1").value,
+            comments:document.getElementById("object_comments1").value,
+            sources:document.getElementById("object_sources1").value,
           },
           files:{
             pigeFiles1:document.getElementById("pigeFiles1").value,
@@ -681,10 +507,9 @@ clearIndividualValues: function(){
           varnish:document.getElementById("object_pixeVarnish").value,
           stretcherSupportStrainer:document.getElementById("object_pixeStretcherSupportStrainer").value,
           notes:{
-            brief:document.getElementById("object_pixeBrief").value,
-            comments:document.getElementById("object_pixeComments").value,
-            sources:document.getElementById("object_pixeSources").value,
-            caption:document.getElementById("object_pixeCaption").value,
+            multilayers:document.getElementById("object_brief_1").value,
+            comments:document.getElementById("object_comments1").value,
+            sources:document.getElementById("object_sources1").value,
           },
           files:{
             pixeFiles1:document.getElementById("pixeFiles1").value,
@@ -717,10 +542,9 @@ clearIndividualValues: function(){
           varnish:document.getElementById("object_rbsVarnish").value,
           stretcherSupportStrainer:document.getElementById("object_rbsStretcherSupportStrainer").value,
           notes:{
-            brief:document.getElementById("object_rbsBrief").value,
-            comments:document.getElementById("object_rbsComments").value,
-            sources:document.getElementById("object_rbsSources").value,
-            caption:document.getElementById("object_rbsCaption").value,
+            multilayers:document.getElementById("object_brief_1").value,
+            comments:document.getElementById("object_comments1").value,
+            sources:document.getElementById("object_sources1").value,
           },
           files:{
             rbsFiles1:document.getElementById("rbsFiles1").value,
@@ -753,10 +577,9 @@ clearIndividualValues: function(){
           varnish:document.getElementById("object_rsVarnish").value,
           stretcherSupportStrainer:document.getElementById("object_rsStretcherSupportStrainer").value,
           notes:{
-            brief:document.getElementById("object_rsBrief").value,
-            comments:document.getElementById("object_rsComments").value,
-            sources:document.getElementById("object_rsSources").value,
-            caption:document.getElementById("object_rsCaption").value,
+            multilayers:document.getElementById("object_brief_1").value,
+            comments:document.getElementById("object_comments1").value,
+            sources:document.getElementById("object_sources1").value,
           },
           files:{
             rsFiles1:document.getElementById("rsFiles1").value,
@@ -789,10 +612,9 @@ clearIndividualValues: function(){
           varnish:document.getElementById("object_rtgVarnish").value,
           stretcherSupportStrainer:document.getElementById("object_rtgStretcherSupportStrainer").value,
           notes:{
-            brief:document.getElementById("object_rtgBrief").value,
-            comments:document.getElementById("object_rtgComments").value,
-            sources:document.getElementById("object_rtgSources").value,
-            caption:document.getElementById("object_rtgCaption").value,
+            multilayers:document.getElementById("object_brief_1").value,
+            comments:document.getElementById("object_comments1").value,
+            sources:document.getElementById("object_sources1").value,
           },
           files:{
             rtgFiles1:document.getElementById("rtgFiles1").value,
@@ -825,10 +647,9 @@ clearIndividualValues: function(){
           varnish:document.getElementById("object_scanningVarnish").value,
           stretcherSupportStrainer:document.getElementById("object_scanningStretcherSupportStrainer").value,
           notes:{
-            brief:document.getElementById("object_scanningBrief").value,
-            comments:document.getElementById("object_scanningComments").value,
-            sources:document.getElementById("object_scanningSources").value,
-            caption:document.getElementById("object_scanningCaption").value,
+            multilayers:document.getElementById("object_brief_1").value,
+            comments:document.getElementById("object_comments1").value,
+            sources:document.getElementById("object_sources1").value,
           },
           files:{
             scanningFiles1:document.getElementById("scanningFiles1").value,
@@ -861,10 +682,9 @@ clearIndividualValues: function(){
           varnish:document.getElementById("object_semSemEdxVarnish").value,
           stretcherSupportStrainer:document.getElementById("object_semSemEdxStretcherSupportStrainer").value,
           notes:{
-            brief:document.getElementById("object_semSemEdxBrief").value,
-            comments:document.getElementById("object_semSemEdxComments").value,
-            sources:document.getElementById("object_semSemEdxSources").value,
-            caption:document.getElementById("object_semSemEdxCaption").value,
+            multilayers:document.getElementById("object_brief_1").value,
+            comments:document.getElementById("object_comments1").value,
+            sources:document.getElementById("object_sources1").value,
           },
           files:{
             semSemEdxFiles1:document.getElementById("semSemEdxFiles1").value,
@@ -897,10 +717,9 @@ clearIndividualValues: function(){
           varnish:document.getElementById("object_temVarnish").value,
           stretcherSupportStrainer:document.getElementById("object_temStretcherSupportStrainer").value,
           notes:{
-            brief:document.getElementById("object_temBrief").value,
-            comments:document.getElementById("object_temComments").value,
-            sources:document.getElementById("object_temSources").value,
-            caption:document.getElementById("object_temCaption").value,
+            multilayers:document.getElementById("object_brief_1").value,
+            comments:document.getElementById("object_comments1").value,
+            sources:document.getElementById("object_sources1").value,
           },
           files:{
             temFiles1:document.getElementById("temFiles1").value,
@@ -933,10 +752,9 @@ clearIndividualValues: function(){
           varnish:document.getElementById("object_tlVarnish").value,
           stretcherSupportStrainer:document.getElementById("object_tlStretcherSupportStrainer").value,
           notes:{
-            brief:document.getElementById("object_tlBrief").value,
-            comments:document.getElementById("object_tlComments").value,
-            sources:document.getElementById("object_tlSources").value,
-            caption:document.getElementById("object_tlCaption").value,
+            multilayers:document.getElementById("object_brief_1").value,
+            comments:document.getElementById("object_comments1").value,
+            sources:document.getElementById("object_sources1").value,
           },
           files:{
             tlFiles1:document.getElementById("tlFiles1").value,
@@ -969,10 +787,9 @@ clearIndividualValues: function(){
           varnish:document.getElementById("object_tlcVarnish").value,
           stretcherSupportStrainer:document.getElementById("object_tlcStretcherSupportStrainer").value,
           notes:{
-            brief:document.getElementById("object_tlcBrief").value,
-            comments:document.getElementById("object_tlcComments").value,
-            sources:document.getElementById("object_tlcSources").value,
-            caption:document.getElementById("object_tlcCaption").value,
+            multilayers:document.getElementById("object_brief_1").value,
+            comments:document.getElementById("object_comments1").value,
+            sources:document.getElementById("object_sources1").value,
           },
           files:{
             tlcFiles1:document.getElementById("tlcFiles1").value,
@@ -1005,10 +822,9 @@ clearIndividualValues: function(){
           varnish:document.getElementById("object_uv_visVarnish").value,
           stretcherSupportStrainer:document.getElementById("object_uv_visStretcherSupportStrainer").value,
           notes:{
-            brief:document.getElementById("object_uv_visBrief").value,
-            comments:document.getElementById("object_uv_visComments").value,
-            sources:document.getElementById("object_uv_visSources").value,
-            caption:document.getElementById("object_uv_visCaption").value,
+            multilayers:document.getElementById("object_brief_1").value,
+            comments:document.getElementById("object_comments1").value,
+            sources:document.getElementById("object_sources1").value,
           },
           files:{
             uv_visFiles1:document.getElementById("uv_visFiles1").value,
@@ -1041,10 +857,9 @@ clearIndividualValues: function(){
           varnish:document.getElementById("object_uvfVarnish").value,
           stretcherSupportStrainer:document.getElementById("object_uvfStretcherSupportStrainer").value,
           notes:{
-            brief:document.getElementById("object_uvfBrief").value,
-            comments:document.getElementById("object_uvfComments").value,
-            sources:document.getElementById("object_uvfSources").value,
-            caption:document.getElementById("object_uvfCaption").value,
+            multilayers:document.getElementById("object_brief_1").value,
+            comments:document.getElementById("object_comments1").value,
+            sources:document.getElementById("object_sources1").value,
           },
           files:{
             uvfFiles1:document.getElementById("uvfFiles1").value,
@@ -1077,10 +892,9 @@ clearIndividualValues: function(){
           varnish:document.getElementById("object_visVarnish").value,
           stretcherSupportStrainer:document.getElementById("object_visStretcherSupportStrainer").value,
           notes:{
-            brief:document.getElementById("object_visBrief").value,
-            comments:document.getElementById("object_visComments").value,
-            sources:document.getElementById("object_visSources").value,
-            caption:document.getElementById("object_visCaption").value,
+            multilayers:document.getElementById("object_brief_1").value,
+            comments:document.getElementById("object_comments1").value,
+            sources:document.getElementById("object_sources1").value,
           },
           files:{
             visFiles1:document.getElementById("visFiles1").value,
@@ -1113,10 +927,9 @@ clearIndividualValues: function(){
           varnish:document.getElementById("object_xrdVarnish").value,
           stretcherSupportStrainer:document.getElementById("object_xrdStretcherSupportStrainer").value,
           notes:{
-            brief:document.getElementById("object_xrdBrief").value,
-            comments:document.getElementById("object_xrdComments").value,
-            sources:document.getElementById("object_xrdSources").value,
-            caption:document.getElementById("object_xrdCaption").value,
+            multilayers:document.getElementById("object_brief_1").value,
+            comments:document.getElementById("object_comments1").value,
+            sources:document.getElementById("object_sources1").value,
           },
           files:{
             xrdFiles1:document.getElementById("xrdFiles1").value,
@@ -1149,10 +962,9 @@ clearIndividualValues: function(){
           varnish:document.getElementById("object_xrfVarnish").value,
           stretcherSupportStrainer:document.getElementById("object_xrfStretcherSupportStrainer").value,
           notes:{
-            brief:document.getElementById("object_xrfBrief").value,
-            comments:document.getElementById("object_xrfComments").value,
-            sources:document.getElementById("object_xrfSources").value,
-            caption:document.getElementById("object_xrfCaption").value,
+            multilayers:document.getElementById("object_brief_1").value,
+            comments:document.getElementById("object_comments1").value,
+            sources:document.getElementById("object_sources1").value,
           },
           files:{
             xrfFiles1:document.getElementById("xrfFiles1").value,
@@ -1169,320 +981,4 @@ clearIndividualValues: function(){
       }
     }
 
-
-
-
-    var itemDetails = {
-    //type:document.getElementById("objectTypeForm").value,
-    info:{
-      userId:Meteor.user()._id,
-      createdAt: Meteor.myFunctions.dateFormat(),
-      addedBy:Meteor.user().profile.full_name,
-      last_edit: Meteor.myFunctions.dateFormat(),
-      editedBy:Meteor.user().profile.full_name,
-      editorId:Meteor.user()._id,
-      visible:"public",
-    },
-    data:{
-      imgs:{
-        front:document.getElementById("img_front").value,
-        front_id:document.getElementById("img_front_id").value,
-        back:document.getElementById("img_back").value,
-        back_id:document.getElementById("img_back_id").value,
-        side:document.getElementById("img_side").value,
-        side_id:document.getElementById("img_side_id").value,
-        signature:document.getElementById("img_signature").value,
-        signature_id:document.getElementById("img_signature_id").value,
-        original:{
-          photoOne:document.getElementById("photoOne1").value,
-          photoOne1_id:document.getElementById("photoOne1_id").value,
-          photoTwo1:document.getElementById("photoTwo1").value,
-          photoTwo1_id:document.getElementById("photoTwo1_id").value,
-          photoThree1:document.getElementById("photoThree1").value,
-          photoThree1_id:document.getElementById("photoThree1_id").value,
-          photoFour1:document.getElementById("photoFour1").value,
-          photoFour1_id:document.getElementById("photoFour1_id").value,
-        },
-        interventions:{
-          photoOne2:document.getElementById("photoOne2").value,
-          photoOne2_id:document.getElementById("photoOne2_id").value,
-          photoTwo2:document.getElementById("photoTwo2").value,
-          photoTwo2_id:document.getElementById("photoTwo2_id").value,
-          photoThree2:document.getElementById("photoThree2").value,
-          photoThree2_id:document.getElementById("photoThree2_id").value,
-          photoFour2:document.getElementById("photoFour2").value,
-          photoFour2_id:document.getElementById("photoFour2_id").value,
-        },
-        restoration:{
-          photoOne3:document.getElementById("photoOne3").value,
-          photoOne3_id:document.getElementById("photoOne3_id").value,
-          photoTwo3:document.getElementById("photoTwo3").value,
-          photoTwo3_id:document.getElementById("photoTwo3_id").value,
-          photoThree3:document.getElementById("photoThree3").value,
-          photoThree3_id:document.getElementById("photoThree3_id").value,
-          photoFour3:document.getElementById("photoFour3").value,
-          photoFour3_id:document.getElementById("photoFour3_id").value,
-        },
-      },
-      original:{
-        files:document.getElementById("files1").value,
-        files_id:document.getElementById("files_id1").value,
-      },
-      interventions:{
-        files:document.getElementById("files2").value,
-        files_id:document.getElementById("files_id2").value,
-      },
-      restoration:{
-        files:document.getElementById("files3").value,
-        files_id:document.getElementById("files_id3").value,
-      },
-    },
-	  basic:{
-		  author:document.getElementById("author").value,
-		  title:document.getElementById("title").value,
-		  date:document.getElementById("date").value,
-		  technique:document.getElementById("technique").value,
-		  dimensions_noFrame:document.getElementById("dimensions_noFrame").value,
-		  dimensions_frame:document.getElementById("dimensions_frame").value,
-		  originalOwner:document.getElementById("originalOwner").value,
-		  currentOwner:document.getElementById("currentOwner").value,
-		  originalLocation:document.getElementById("originalLocation").value,
-		  currentLocation:document.getElementById("currentLocation").value,
-		  inventoryNumber:document.getElementById("inventoryNumber").value,
-		  investigated:document.getElementById("methodsTechniques").value,
-      notes:{
-        history:document.getElementById("historyBasic").value,
-        provenance:document.getElementById("provenanceBasic").value,
-        comments:document.getElementById("commentsBasic").value
-      },
-	  },
-    materials:{
-      original:{
-        primingGround:document.getElementById("primingGround1").value,
-        pigmentsDyes:document.getElementById("pigmentsDyes1").value,
-        bendingMedium:document.getElementById("bendingMedium1").value,
-        additives:document.getElementById("additives1").value,
-        layerVarnish:document.getElementById("layerVarnish1").value,
-        underdrawingPentimento:document.getElementById("underdrawingPentimento1").value,
-        leafs:document.getElementById("leafs1").value,
-        leafsApplication:document.getElementById("leafsApplication1").value,
-        periodStyle:document.getElementById("periodStyle1").value,
-        stretcher:document.getElementById("stretcher1").value,
-        supportStrainer:document.getElementById("supportStrainer1").value,
-        support:document.getElementById("support1").value,
-        thickness:document.getElementById("thickness1").value,
-        piecesJoints:document.getElementById("piecesJoints1").value,
-        texture:document.getElementById("texture1").value,
-        color:document.getElementById("color1").value,
-        manufacturer:document.getElementById("manufacturer1").value,
-        wave:document.getElementById("wave1").value,
-        constructionAids:document.getElementById("constructionAids1").value,
-        decorativeApplications:document.getElementById("decorativeApplications1").value,
-        potataGiornata:document.getElementById("potataGiornata1").value,
-        relief:document.getElementById("relief1").value,
-        samples:document.getElementById("samples1").value,
-        plaster:{
-          layers:document.getElementById("p_layers1").value,
-          composition:document.getElementById("p_composition1").value,
-          binderFiller:document.getElementById("p_binderFiller1").value,
-        },
-        density:{
-          weft:document.getElementById("densityWeft1").value,
-          warp:document.getElementById("densityWarp1").value,
-        },
-        thickness:{
-          weft:document.getElementById("thicknessWeft1").value,
-          warp:document.getElementById("thicknessWarp1").value,
-        },
-        decorativeFrame:{
-          periodStyle:document.getElementById("df_periodStyle1").value,
-          support:document.getElementById("df_support1").value,
-          priming:document.getElementById("df_priming1").value,
-          decorativeLayer:document.getElementById("df_decorativeLayer1").value,
-        },
-        notes:{
-          sources:document.getElementById("sources1").value,
-          comments:document.getElementById("comments1").value
-        },
-      },
-      interventions:{
-        primingGround:document.getElementById("primingGround2").value,
-        pigmentsDyes:document.getElementById("pigmentsDyes2").value,
-        bendingMedium:document.getElementById("bendingMedium2").value,
-        additives:document.getElementById("additives2").value,
-        layerVarnish:document.getElementById("layerVarnish2").value,
-        leafs:document.getElementById("leafs2").value,
-        leafsApplication:document.getElementById("leafsApplication2").value,
-        periodStyle:document.getElementById("periodStyle2").value,
-        interventions:document.getElementById("interventions2").value,
-        piecesJoints:document.getElementById("piecesJoints2").value,
-        texture:document.getElementById("texture2").value,
-        color:document.getElementById("color2").value,
-        manufacturer:document.getElementById("manufacturer2").value,
-        wave:document.getElementById("wave2").value,
-        constructionAids:document.getElementById("constructionAids2").value,
-        decorativeApplications:document.getElementById("decorativeApplications2").value,
-        potataGiornata:document.getElementById("potataGiornata2").value,
-        relief:document.getElementById("relief2").value,
-        samples:document.getElementById("samples2").value,
-        plaster:{
-          layers:document.getElementById("p_layers2").value,
-          composition:document.getElementById("p_composition2").value,
-          binderFiller:document.getElementById("p_binderFiller2").value,
-        },
-        density:{
-          weft:document.getElementById("densityWeft2").value,
-          warp:document.getElementById("densityWarp2").value,
-        },
-        thickness:{
-          weft:document.getElementById("thicknessWeft2").value,
-          warp:document.getElementById("thicknessWarp2").value,
-        },
-        decorativeFrame:{
-          periodStyle:document.getElementById("df_periodStyle2").value,
-          support:document.getElementById("df_support2").value,
-          priming:document.getElementById("df_priming2").value,
-          decorativeLayer:document.getElementById("df_decorativeLayer2").value,
-          warnish:document.getElementById("df_warnish2").value,
-        },
-        notes:{
-          sources:document.getElementById("sources2").value,
-          comments:document.getElementById("comments2").value
-        },
-      },
-      work:{
-        executor:document.getElementById("executor").value,
-        responsiblePerson:document.getElementById("responsiblePerson").value,
-        investor:document.getElementById("investor").value,
-        people:document.getElementById("people").value,
-        chronologicalProcess:document.getElementById("chronologicalProcess").value,
-        duration:document.getElementById("duration").value,
-        notes:{
-          comments:document.getElementById("comments3").value
-        },
-      },
-    },
-    details:{
-      methods:{
-        aas:aasDetails,
-        aes:aesDetails,
-        afm:afmDetails,
-        analysis:analysisDetails,
-        binderFiller:binderFillerDetails,
-        c_14:c_14Details,
-        drms:drmsDetails,
-        fors:forsDetails,
-        fr_ir:fr_irDetails,
-        gc_ms:gc_msDetails,
-        gl:glDetails,
-        granulometry:granulometryDetails,
-        hygroscopic:hygroscopicDetails,
-        irpIrrIrfc:irpIrrIrfcDetails,
-        libs:libsDetails,
-        om:omDetails,
-        pige:pigeDetails,
-        pixe:pixeDetails,
-        rbs:rbsDetails,
-        rs:rsDetails,
-        rtg:rtgDetails,
-        scanning:scanningDetails,
-        semSemEdx:semSemEdxDetails,
-        tem:temDetails,
-        tl:tlDetails,
-        tlc:tlcDetails,
-        uv_vis:uv_visDetails,
-        uvf:uvfDetails,
-        vis:visDetails,
-        xrd:xrdDetails,
-        xrf:xrfDetails,
-      },
-    },
-  }
-  console.log(itemDetails);
-  Meteor.call("insertItem", itemDetails);
-  alert("["+itemDetails.basic.title+"] successfully updated");
-  },
-  updateData: function(){
-    var itemId = Session.get("itemId");
-    var itemDetails = {
-    userId:event.target.user_id.value,
-    createdAt: event.target.created_at.value,
-    addedBy:event.target.added_by.value,
-    last_edit: Meteor.myFunctions.dateFormat(),
-    editedBy:Meteor.user().profile.full_name,
-    editorId:Meteor.user()._id,
-    visible:"public",
-	  basic:{
-		  author:event.target.author.value,
-		  title:event.target.title.value,
-		  date:event.target.date.value,
-		  period_style:event.target.period_style.value,
-		  collection_owner:event.target.collection_owner.value,
-		  museum_gallery:event.target.museum_gallery.value,
-		  painting_technique:event.target.painting_technique.value,
-		  stretcher:event.target.stretcher.value,
-		  support:event.target.support.value,
-		  priming:event.target.priming.value,
-		  paint_layer:event.target.paint_layer.value,
-		  varnish:event.target.varnish.value
-	  },
-	  data:{
-      research:{
-        research:event.target.data_research.value,
-        researchId:event.target.data_research_id.value
-      },
-		  imgs:{
-			  img_front:event.target.img_front.value,
-			  img_front_id:event.target.img_front_id.value,
-			  img_back:event.target.img_back.value,
-			  img_back_id:event.target.img_back_id.value
-		  }
-	  }
-    }
-    Meteor.call("updateItem", itemId, itemDetails)
-    alert("["+itemDetails.basic.title+"] successfully updated");
-  },
-  addUser: function(){
-    var username = $('[name=username]').val();
-    var password = $('[name=password]').val();
-    var email = $('[name=email]').val();
-    var full_name = $('[name=full_name]').val();
-    var institution = $('[name=institution]').val();
-    var telephone = $('[name=telephone]').val();
-
-    var userDetails = {
-      username:username,
-      password: password,
-      profile: {
-        full_name: full_name,
-        email: email,
-        institution: institution,
-        telephone: telephone,
-        password:password // this is insecure, only admin should see this field
-      }
-    }
-    Meteor.call("createUsers", userDetails);
-  },
-  editUser: function(){
-    var userId = Session.get("userId");
-    var username = $('[name=username]').val();
-    var password = $('[name=password]').val();
-    var email = $('[name=email]').val();
-    var full_name = $('[name=full_name]').val();
-    var institution = $('[name=institution]').val();
-    var telephone = $('[name=telephone]').val();
-
-    var userDetails = {
-      username:username,
-      password: password,
-      profile: {
-        full_name: full_name,
-        email: email,
-        institution: institution,
-        telephone: telephone,
-        password:password // this is insecure, only admin should see this field
-      }
-    }
-    Meteor.call("editUsers", userId, userDetails)
-  }
-}
+    */

@@ -1,0 +1,103 @@
+<template name="files_methods_rtg">
+<div class="row align-center">
+<div class="col-xs-12">
+  <h3>upload VIS/GL/UVF/IRP/RTG/SEM/spectrum photo</h3>
+</div>
+</div>
+<div class="row">
+  <div class="col-xs-12 col-sm-2 individual-property">PHOTO ONE
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="rtgFiles1_label" class="upload_label" id="upload_rtgFiles1">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="rtgFiles1_label">
+  </div>
+  <div class="col-xs-12 col-sm-2 individual-property"> PHOTO TWO
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="rtgFiles2_label" class="upload_label" id="upload_rtgFiles2">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="rtgFiles2_label">
+  </div>
+  <div class="col-xs-12 col-sm-2 individual-property"> PHOTO THREE
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="rtgFiles3_label" class="upload_label" id="upload_rtgFiles3">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="rtgFiles3_label">
+  </div>
+  <div class="col-xs-12 col-sm-2 individual-property"> PHOTO FOUR
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="rtgFiles4_label" class="upload_label" id="upload_rtgFiles4">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="rtgFiles4_label">
+  </div>
+  <div class="col-xs-12 col-sm-8 individual-property"> UPLOAD RELEVANT FILES (e.g. treatment documentation, conservation report, etc.)
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="rtgFiles5_label" class="upload_label" id="upload_rtgFiles5">(.zip)</label>
+    <input class="individual-data-value" type="file" id="rtgFiles5_label">
+  </div>
+  <div class="col-xs-12">
+    &nbsp;
+  </div>
+</div>
+
+<!-- hidden part1 -->
+<div class="rtgFiles1 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="rtgFiles1" placeholder="" value="{{data.imgs.work.rtgFiles1}}">
+  </div>
+</div>
+<div class="rtgFiles1_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="rtgFiles1_id" placeholder="" value="{{data.imgs.work.rtgFiles1_id}}">
+  </div>
+</div>
+<!-- /hidden part1 -->
+<!-- hidden part 2-->
+<div class="rtgFiles2 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="rtgFiles2" placeholder="" value="{{data.imgs.work.rtgFiles2}}">
+  </div>
+</div>
+<div class="rtgFiles2_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="rtgFiles2_id" placeholder="" value="{{data.imgs.work.rtgFiles2_id}}">
+  </div>
+</div>
+<!-- /hidden part 2-->
+<!-- hidden part 3-->
+<div class="rtgFiles3 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="rtgFiles3" placeholder="" value="{{data.imgs.work.rtgFiles3}}">
+  </div>
+</div>
+<div class="rtgFiles3_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="rtgFiles3_id" placeholder="" value="{{data.imgs.work.rtgFiles3_id}}">
+  </div>
+</div>
+<!-- / hidden part 3-->
+<!-- hidden part4 -->
+<div class="rtgFiles4 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="rtgFiles4" placeholder="" value="{{data.imgs.work.rtgFiles4}}">
+  </div>
+</div>
+<div class="rtgFiles4_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="rtgFiles4_id" placeholder="" value="{{data.imgs.work.rtgFiles4_id}}">
+  </div>
+</div>
+<!-- / hidden part4 -->
+<!-- hidden part 5-->
+<div class="rtgFiles5 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="rtgFiles5" placeholder="" value="{{data.work.rtgFiles5}}">
+  </div>
+</div>
+<div class="rtgFiles5_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="rtgFiles5_id" placeholder="" value="{{data.work.rtgFiles5_id}}">
+  </div>
+</div>
+<!-- /hidden part 5-->
+</template>

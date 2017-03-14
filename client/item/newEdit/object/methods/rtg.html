@@ -1,0 +1,88 @@
+<template name="method_techniques_rtg">
+<div class="toggle" id="object_toggle-rtg">
+  <div class="row align-center">
+    <div class="uderline-method">
+      <h4>rtg</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-6 individual-property rtgExperimental">EXPERIMENTAL PARAMETERS
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_rtgExperimental" placeholder="(e.g. X-ray tube voltage, laser wavelength, air/vacuum, etc.)" value="{{details.methods.rtg.experimentalParameters}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property rtgElements">ELEMENTS DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_rtgElements" placeholder="(e.g. cobalt blue, red ochre, indigo, etc.)" value="{{details.methods.rtg.elements}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property rtgFormulae">CHEMICAL FORMULAE DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_rtgFormulae" placeholder="" value="{{details.methods.rtg.formulae}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property rtgPigmentsDyes">PIGMENTS/DYES IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_rtgPigmentsDyes" placeholder="" value="{{details.methods.rtg.pigmentsDyes}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property rtgPriming">PRIMING IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_rtgPriming" placeholder="" value="{{details.methods.rtg.priming}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property rtgBindingMedia">BINDING MEDIA IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_rtgBindingMedia" placeholder="" value="{{details.methods.rtg.bindingMedia}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property rtgVarnish">VARNISH IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_rtgVarnish" placeholder="" value="{{details.methods.rtg.varnish}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property rtgStretcherSupportStrainer">STRETCHER/SUPPORT/STRAINER IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_rtgStretcherSupportStrainer" placeholder="" value="{{details.methods.rtg.stretcherSupportStrainer}}">
+    </div>
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+  <div class="row align-center">
+    <div class="col-xs-12 notes">Brief info about possible multilayers/underpaintings/retouches
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_rtgBrief" name="sources" rows="4" placeholder="(e.g. secondary effects from underlying signal sources)" value="{{details.methods.rtg.notes.brief}}"></textarea>
+    </div>
+    <div class="col-xs-12 notes">Comments
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_rtgComments" name="sources" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.rtg.notes.comments}}"></textarea>
+    </div>
+    <div class="col-xs-12 notes">Sources
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_rtgSources" name="sources" rows="4" placeholder="(literature)" value="{{details.methods.rtg.notes.sources}}"></textarea>
+    </div>
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+
+
+
+  {{> files_methods_rtg}}
+
+
+  <div class="row align-center">
+    <div class="col-xs-12 notes">Figure captions
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_rtgCaption" name="history" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.rtg.notes.caption}}"></textarea>
+    </div>
+    <br/>
+  </div>
+</div>
+</template>

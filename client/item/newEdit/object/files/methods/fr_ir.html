@@ -1,0 +1,103 @@
+<template name="files_methods_fr_ir">
+<div class="row align-center">
+<div class="col-xs-12">
+  <h3>upload VIS/GL/UVF/IRP/RTG/SEM/spectrum photo</h3>
+</div>
+</div>
+<div class="row">
+  <div class="col-xs-12 col-sm-2 individual-property">PHOTO ONE
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="fr_irFiles1_label" class="upload_label" id="upload_fr_irFiles1">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="fr_irFiles1_label">
+  </div>
+  <div class="col-xs-12 col-sm-2 individual-property"> PHOTO TWO
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="fr_irFiles2_label" class="upload_label" id="upload_fr_irFiles2">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="fr_irFiles2_label">
+  </div>
+  <div class="col-xs-12 col-sm-2 individual-property"> PHOTO THREE
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="fr_irFiles3_label" class="upload_label" id="upload_fr_irFiles3">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="fr_irFiles3_label">
+  </div>
+  <div class="col-xs-12 col-sm-2 individual-property"> PHOTO FOUR
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="fr_irFiles4_label" class="upload_label" id="upload_fr_irFiles4">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="fr_irFiles4_label">
+  </div>
+  <div class="col-xs-12 col-sm-8 individual-property"> UPLOAD RELEVANT FILES (e.g. treatment documentation, conservation report, etc.)
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="fr_irFiles5_label" class="upload_label" id="upload_fr_irFiles5">(.zip)</label>
+    <input class="individual-data-value" type="file" id="fr_irFiles5_label">
+  </div>
+  <div class="col-xs-12">
+    &nbsp;
+  </div>
+</div>
+
+<!-- hidden part1 -->
+<div class="fr_irFiles1 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="fr_irFiles1" placeholder="" value="{{data.imgs.work.fr_irFiles1}}">
+  </div>
+</div>
+<div class="fr_irFiles1_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="fr_irFiles1_id" placeholder="" value="{{data.imgs.work.fr_irFiles1_id}}">
+  </div>
+</div>
+<!-- /hidden part1 -->
+<!-- hidden part 2-->
+<div class="fr_irFiles2 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="fr_irFiles2" placeholder="" value="{{data.imgs.work.fr_irFiles2}}">
+  </div>
+</div>
+<div class="fr_irFiles2_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="fr_irFiles2_id" placeholder="" value="{{data.imgs.work.fr_irFiles2_id}}">
+  </div>
+</div>
+<!-- /hidden part 2-->
+<!-- hidden part 3-->
+<div class="fr_irFiles3 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="fr_irFiles3" placeholder="" value="{{data.imgs.work.fr_irFiles3}}">
+  </div>
+</div>
+<div class="fr_irFiles3_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="fr_irFiles3_id" placeholder="" value="{{data.imgs.work.fr_irFiles3_id}}">
+  </div>
+</div>
+<!-- / hidden part 3-->
+<!-- hidden part4 -->
+<div class="fr_irFiles4 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="fr_irFiles4" placeholder="" value="{{data.imgs.work.fr_irFiles4}}">
+  </div>
+</div>
+<div class="fr_irFiles4_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="fr_irFiles4_id" placeholder="" value="{{data.imgs.work.fr_irFiles4_id}}">
+  </div>
+</div>
+<!-- / hidden part4 -->
+<!-- hidden part 5-->
+<div class="fr_irFiles5 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="fr_irFiles5" placeholder="" value="{{data.work.fr_irFiles5}}">
+  </div>
+</div>
+<div class="fr_irFiles5_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="fr_irFiles5_id" placeholder="" value="{{data.work.fr_irFiles5_id}}">
+  </div>
+</div>
+<!-- /hidden part 5-->
+</template>

@@ -1,0 +1,88 @@
+<template name="method_techniques_fr_ir">
+<div class="toggle" id="object_toggle-fr_ir">
+  <div class="row align-center">
+    <div class="uderline-method">
+      <h4>fr_ir</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-6 individual-property fr_irExperimental">EXPERIMENTAL PARAMETERS
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_fr_irExperimental" placeholder="(e.g. X-ray tube voltage, laser wavelength, air/vacuum, etc.)" value="{{details.methods.fr_ir.experimentalParameters}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property fr_irElements">ELEMENTS DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_fr_irElements" placeholder="(e.g. cobalt blue, red ochre, indigo, etc.)" value="{{details.methods.fr_ir.elements}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property fr_irFormulae">CHEMICAL FORMULAE DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_fr_irFormulae" placeholder="" value="{{details.methods.fr_ir.formulae}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property fr_irPigmentsDyes">PIGMENTS/DYES IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_fr_irPigmentsDyes" placeholder="" value="{{details.methods.fr_ir.pigmentsDyes}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property fr_irPriming">PRIMING IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_fr_irPriming" placeholder="" value="{{details.methods.fr_ir.priming}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property fr_irBindingMedia">BINDING MEDIA IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_fr_irBindingMedia" placeholder="" value="{{details.methods.fr_ir.bindingMedia}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property fr_irVarnish">VARNISH IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_fr_irVarnish" placeholder="" value="{{details.methods.fr_ir.varnish}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property fr_irStretcherSupportStrainer">STRETCHER/SUPPORT/STRAINER IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_fr_irStretcherSupportStrainer" placeholder="" value="{{details.methods.fr_ir.stretcherSupportStrainer}}">
+    </div>
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+  <div class="row align-center">
+    <div class="col-xs-12 notes">Brief info about possible multilayers/underpaintings/retouches
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_fr_irBrief" name="sources" rows="4" placeholder="(e.g. secondary effects from underlying signal sources)" value="{{details.methods.fr_ir.notes.brief}}"></textarea>
+    </div>
+    <div class="col-xs-12 notes">Comments
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_fr_irComments" name="sources" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.fr_ir.notes.comments}}"></textarea>
+    </div>
+    <div class="col-xs-12 notes">Sources
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_fr_irSources" name="sources" rows="4" placeholder="(literature)" value="{{details.methods.fr_ir.notes.sources}}"></textarea>
+    </div>
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+
+
+
+  {{> files_methods_fr_ir}}
+
+
+  <div class="row align-center">
+    <div class="col-xs-12 notes">Figure captions
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_fr_irCaption" name="history" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.fr_ir.notes.caption}}"></textarea>
+    </div>
+    <br/>
+  </div>
+</div>
+</template>

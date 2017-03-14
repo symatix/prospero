@@ -72,9 +72,9 @@ Template.methods_checkbox.events({
     var methodId = $(event.target).attr('for');
 
     console.log(methodId);
-    $('#toggle-'+methodId).slideToggle('').toggleClass('active');
+    $('#object_toggle-'+methodId).slideToggle('').toggleClass('active');
 
-    if ($('#toggle-'+methodId).hasClass('active')) {
+    if ($('#object_toggle-'+methodId).hasClass('active')) {
       $(event.target).addClass('check-active');
     } else {
       $(event.target).removeClass('check-active');
